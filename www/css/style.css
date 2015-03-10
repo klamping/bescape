@@ -1,1 +1,22 @@
 /* Empty. Add your own CSS if you like */
+body {
+  color: #999;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-size: 24px;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: left;
+  padding: .5em;
+  line-height: 1.2;
+}
+
+.scroll, .slider {
+  height: 100%;
+}
