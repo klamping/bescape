@@ -19,105 +19,105 @@ angular.module('bescape', ['ionic', 'ngCordova'])
 })
 
 .value('slides', [
-  // {
-  //   prompt: '<h1>Bescape</h1><p>Mindfulness for your busy life</p>',
-  //   buttons: [{
-  //     action: 'advanceSlide()',
-  //     text: 'Start your Session',
-  //     type: 'calm'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>If possible, silence your phone</p>',
-  //   buttons: [{
-  //     action: 'advanceSlide()',
-  //     text: 'Okay',
-  //     type: 'balanced'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Are you in a "calm" environment?</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'Yes',
-  //       action: 'advanceSlide(2)'
-  //   }, {
-  //       type: 'royal',
-  //       text: 'No',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>That\'s okay. Life is hectic sometimes. It\'s why this app exists.</p><p>If possible, try going for a walk to avoid interruptions, or escape to a solitary room.</p>',
-  //   buttons: [{
-  //       type: 'royal',
-  //       text: 'Okay',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Feel your heart beat in your chest.</p><p>Is it racing or is it calm?</p>',
-  //   buttons: [{
-  //       type: 'positive',
-  //       text: 'It\'s Racing',
-  //       action: 'advanceSlide()'
-  //   }, {
-  //       type: 'calm',
-  //       text: 'It\'s Calm',
-  //       action: 'advanceSlide(2)'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Take a few extra moments to slow down.</p><p>Take a deep breath and settle in, letting your racing heart calm.</p>',
-  //   buttons: [{
-  //       type: 'positive',
-  //       text: 'I\'m slowing down.',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Now focus on your breathing.</p><p>Draw in six deep breaths. Feel yourself breathing in and out.</p><p><strong>Hold the button while breathing in, and release it as you breath out.</strong></p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m Breathing.',
-  //       action: 'countThenAdvance(6)'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Notice the places in your body where there is tension or pain.</p><p>This could be at your shoulders, core, back, or even your pursed lips.</p><p>Tighten completely, then let go of your tension with your awareness of it.</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m feeling relaxed.',
-  //       action: 'advanceSlide(2)'
-  //   }, {
-  //       type: 'positive',
-  //       text: 'I\'m still tense.',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>That\'s okay. Life can be stressful. We don\'t always have time to relax.</p><p>Notice the places in your body where you do feel relaxed.</p><p>See if you can enhance your relaxation in those place.</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m relaxing.',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
   {
-    prompt: '<div class="wait-spinner" ng-show="waiting"><ion-spinner icon="ripple"></ion-spinner></div><p>Listen to the sounds around you. Are they loud, soft, or in-between?</p><p><strong>Hold the button for 30 seconds while you listen to your world.</strong></p>',
+    prompt: '<h1>Bescape</h1><p>Mindfulness for your busy life</p>',
+    buttons: [{
+      action: 'advanceSlide()',
+      text: 'Start your Session',
+      type: 'calm'
+    }]
+  },
+  {
+    prompt: '<p>If possible, silence your phone</p>',
+    buttons: [{
+      action: 'advanceSlide()',
+      text: 'Okay',
+      type: 'balanced'
+    }]
+  },
+  {
+    prompt: '<p>Are you in a "calm" environment?</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'Yes',
+        action: 'advanceSlide(2)'
+    }, {
+        type: 'royal',
+        text: 'No',
+        action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<p>That\'s okay. Life is hectic sometimes. It\'s why this app exists.</p><p>If possible, try going for a walk to avoid interruptions, or escape to a solitary room.</p>',
+    buttons: [{
+        type: 'royal',
+        text: 'Okay',
+        action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<p>Feel your heart beat in your chest.</p><p>Is it racing or is it calm?</p>',
+    buttons: [{
+        type: 'positive',
+        text: 'It\'s Racing',
+        action: 'advanceSlide()'
+    }, {
+        type: 'calm',
+        text: 'It\'s Calm',
+        action: 'advanceSlide(2)'
+    }]
+  },
+  {
+    prompt: '<p>Take a few extra moments to slow down.</p><p>Take a deep breath and settle in, letting your racing heart calm.</p>',
+    buttons: [{
+        type: 'positive',
+        text: 'I\'m slowing down.',
+        action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<p>Now focus on your breathing.</p><p>Draw in six deep breaths. Feel yourself breathing in and out.</p><p><strong>Hold the button while breathing in, and release it as you breath out.</strong></p>',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m Breathing.',
+        action: 'countThenAdvance(6)'
+    }]
+  },
+  {
+    prompt: '<p>Notice the places in your body where there is tension or pain.</p><p>This could be at your shoulders, core, back, or even your pursed lips.</p><p>Tighten completely, then let go of your tension with your awareness of it.</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m feeling relaxed.',
+        action: 'advanceSlide(2)'
+    }, {
+        type: 'positive',
+        text: 'I\'m still tense.',
+        action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<p>That\'s okay. Life can be stressful. We don\'t always have time to relax.</p><p>Notice the places in your body where you do feel relaxed.</p><p>See if you can enhance your relaxation in those place.</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m relaxing.',
+        action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<div class="wait-spinner" ng-show="waiting"><ion-spinner icon="ripple"></ion-spinner></div><p>Listen to the sounds around you. Are they loud, soft, or in-between?</p><p><strong>Hold the button for 15 seconds while you listen to your world.</strong></p>',
     buttons: [{
         type: 'calm',
         text: 'I\'m Listening',
-        hold: 'waitThenAdvance(30)',
+        hold: 'waitThenAdvance(15)',
         release: 'cancelAdvance()'
     }]
   },
   {
-    prompt: '<div class="wait-spinner" ng-show="waiting"><ion-spinner icon="ripple"></ion-spinner></div><p>Look around you. Notice any interesting colors or patterns?</p><p>Hold the button for another 30 seconds while you experience the sights.</p><!-- <p>It will vibrate when complete.</p> -->',
+    prompt: '<div class="wait-spinner" ng-show="waiting"><ion-spinner icon="ripple"></ion-spinner></div><p>Look around you. Notice any interesting colors or patterns?</p><p>Hold the button for another 15 seconds while you experience the sights.</p><!-- <p>It will vibrate when complete.</p> -->',
     buttons: [{
         type: 'calm',
         text: 'I\'m Seeing',
-        hold: 'waitThenAdvance(3)',
+        hold: 'waitThenAdvance(15)',
         release: 'cancelAdvance()'
     }]
   },
@@ -150,11 +150,11 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<p>What is your greatest fear about your thoughts?</p><p>Can you transform that fear?</p><p>Don\'t worry, you don\'t have to have find an answer right now. Just process.</p><p>Hold the button for 30 seconds while you think.</p>',
+    prompt: '<p>What is your greatest fear about your thoughts?</p><p>Can you transform that fear?</p><p>Don\'t worry, you don\'t have to have find an answer right now. Just process.</p><p>Hold the button for 15 seconds while you think.</p>',
     buttons: [{
         type: 'calm',
         text: 'I\'m Transforming',
-        hold: 'waitThenAdvance(3)',
+        hold: 'waitThenAdvance(15)',
         release: 'cancelAdvance()'
     }]
   },
@@ -167,11 +167,11 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<p>Think to yourself, what is your happiness today?</p><p>Once you find it, consider how you can maintain it.</p><p>Hold the button for 30 seconds while you think.</p>',
+    prompt: '<p>Think to yourself, what is your happiness today?</p><p>Once you find it, consider how you can maintain it.</p><p>Hold the button for 15 seconds while you think.</p>',
     buttons: [{
         type: 'calm',
         text: 'I\'m Finding Happiness.',
-        hold: 'waitThenAdvance(3)',
+        hold: 'waitThenAdvance(15)',
         release: 'cancelAdvance()'
     }]
   },
@@ -188,18 +188,18 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<p>Think about your fear. Will your fear prevent you from maintaining your happiness and aspirations?</p><p>Hold the button for 30 seconds and think.</p>',
+    prompt: '<p>Think about your fear. Will your fear prevent you from maintaining your happiness and aspirations?</p><p>Hold the button for 15 seconds and think.</p>',
     buttons: [{
         type: 'calm',
         text: 'I\'m Accepting Fear.',
-        hold: 'waitThenAdvance(3)',
+        hold: 'waitThenAdvance(15)',
         release: 'cancelAdvance()'
     }]
   },
   {
     prompt: '<p>Focus on your breathing one last time.</p><p>Take one big, deep breath and return to the world.</p><p>This is you, alive and breathing.</p>',
     buttons: [{
-        type: 'assertive',
+        type: 'balanced',
         text: 'I am Complete.',
         action: 'advanceSlide()'
     }]
@@ -268,6 +268,8 @@ angular.module('bescape', ['ionic', 'ngCordova'])
 
   $scope.cancelAdvance = function () {
     $scope.waiting = false;
+    $scope.count = 0;
+    $scope.total = 0;
     $interval.cancel(waiter);
   };
 });

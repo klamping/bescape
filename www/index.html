@@ -5,8 +5,6 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400' rel='stylesheet' type='text/css'>
-
     <!-- compiled css output -->
     <link href="css/ionic.app.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -30,9 +28,14 @@
         <div class="slide" ng-repeat="slide in slides" ng-show="$index === activeSlide">
           <div class="content">
             <div ng-bind-html="slide.prompt"></div>
-            <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" ng-click="{{button.action}}" on-hold="{{button.hold}}" on-release="{{button.release}}">
-              {{button.text}}
-            </button>
+            <div class="buttons">
+              <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" ng-click="{{button.action}}" ng-if="button.action">
+                {{button.text}}
+              </button>
+              <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" on-hold="{{button.hold}}" on-release="{{button.release}}" ng-if="button.hold">
+                {{button.text}}
+              </button>
+            </div>
           </div>
         </div>
       </ion-content>
