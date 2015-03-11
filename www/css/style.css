@@ -17,6 +17,53 @@ body {
   line-height: 1.2;
 }
 
-.scroll, .slider {
+.scroll, .slide {
   height: 100%;
+}
+
+.slide {
+  position: relative;
+  display: block;
+  transition: 750ms ease-in-out all;
+}
+
+.slide.ng-hide-add {
+  opacity: 1;
+}
+.slide.ng-hide-add-active {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+.slide.ng-hide-remove {
+  transform: translateY(100px);
+  opacity: 1;
+}
+.slide.ng-hide-remove-active {
+  opacity: 0;
+}
+
+
+.progress {
+  width: 80%;
+  height: 25px;
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 750ms ease-in-out opacity;
+}
+.progress.ng-hide {
+  opacity: 0;
+}
+.progress-wrap {
+  background: #f80;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  .progress-bar {
+    background: #ddd;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
 }
