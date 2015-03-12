@@ -27,7 +27,7 @@
         <progress value={{count}} max={{total}} ng-show="total > 0" class="progress"></progress>
         <div class="slide" ng-repeat="slide in slides" ng-show="$index === activeSlide">
           <div class="content">
-            <div ng-bind-html="slide.prompt"></div>
+            <div ng-bind-html="slide.prompt" class="prompt"></div>
             <div class="buttons">
               <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" ng-click="{{button.action}}" ng-if="button.action">
                 {{button.text}}

@@ -1,0 +1,97 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #999;
+  font-size: 24px;
+  font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
+}
+
+
+.content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-flow: column;
+  align-items: center;
+  padding: .5em;
+  line-height: 1.2;
+}
+
+.prompt {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  max-width: 30em;
+}
+
+.buttons {
+  text-align: right;
+  padding-right: 5%;
+  padding-bottom: 3%;
+  width: 100%;
+}
+
+.scroll, .slide {
+  height: 100%;
+}
+
+.slide,
+.slide .prompt,
+.slide .buttons {
+  position: relative;
+  transition: 650ms ease-in-out all;
+}
+
+.slide.ng-hide-add {
+  opacity: 1;
+}
+.slide.ng-hide-add-active {
+  opacity: 0;
+}
+.slide.ng-hide-remove {
+  opacity: 1;
+}
+.slide.ng-hide-remove-active {
+  opacity: 0;
+}
+
+.slide.ng-hide-add-active .prompt,
+.slide.ng-hide-remove-active .buttons {
+  transform: translateY(-50px);
+}
+.slide.ng-hide-add-active .buttons,
+.slide.ng-hide-remove-active .prompt {
+  transform: translateY(50px);
+}
+
+.progress {
+  width: 80%;
+  height: 25px;
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 750ms ease-in-out opacity;
+}
+.progress.ng-hide {
+  opacity: 0;
+}
+.progress-wrap {
+  background: #f80;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  .progress-bar {
+    background: #ddd;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+}
