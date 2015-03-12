@@ -12,30 +12,22 @@ body {
   font-family: Palatino,"Palatino Linotype","Palatino LT STD","Book Antiqua",Georgia,serif;
 }
 
+.progress-wrapper {
+  position: absolute;
+  top: 5%;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
 
-.content {
-  display: flex;
-  height: 100%;
-  width: 100%;
-  flex-flow: column;
-  align-items: center;
-  padding: .5em;
-  line-height: 1.2;
-}
+  transition: 500ms ease-in-out opacity;
 
-.prompt {
-  flex: 1;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  max-width: 30em;
-}
+  &.ng-hide {
+    opacity: 0;
+  }
 
-.buttons {
-  text-align: right;
-  padding-right: 5%;
-  padding-bottom: 3%;
-  width: 100%;
+  .progress {
+    margin: 0;
+  }
 }
 
 .scroll, .slide {
@@ -71,27 +63,27 @@ body {
   transform: translateY(50px);
 }
 
-.progress {
-  width: 80%;
-  height: 25px;
-  position: absolute;
-  top: 2em;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: 750ms ease-in-out opacity;
+
+.content {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-flow: column;
+  align-items: center;
+  line-height: 1.2;
 }
-.progress.ng-hide {
-  opacity: 0;
+.prompt {
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  max-width: 30em;
+  padding: 0 1em;
 }
-.progress-wrap {
-  background: #f80;
-  margin: 20px 0;
-  overflow: hidden;
-  position: relative;
-  .progress-bar {
-    background: #ddd;
-    left: 0;
-    position: absolute;
-    top: 0;
-  }
+
+.buttons {
+  text-align: right;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  width: 100%;
 }

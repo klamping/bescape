@@ -24,7 +24,9 @@
 
     <ion-pane>
       <ion-content>
-        <progress value={{count}} max={{total}} ng-show="total > 0" class="progress"></progress>
+        <div class="progress-wrapper" ng-show="total > 0">
+          <progress value={{count}} max={{total}} class="progress"></progress>
+        </div>
         <div class="slide" ng-repeat="slide in slides" ng-show="$index === activeSlide">
           <div class="content">
             <div ng-bind-html="slide.prompt" class="prompt"></div>

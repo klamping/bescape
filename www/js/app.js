@@ -209,7 +209,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
   }
 ])
 
-.controller('bescapeCtrl', function($scope, $interval, $cordovaVibration, $ionicPlatform, slides) {
+.controller('bescapeCtrl', function($scope, $interval, $cordovaVibration, $ionicPlatform, slides, $timeout) {
   var waiter;
   $scope.activeSlide = 0;
   $scope.slides = slides;
@@ -229,8 +229,10 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     $scope.count++;
     if ($scope.count === total) {
       $scope.advanceSlide();
-      $scope.count = 0;
-      $scope.total = 0;
+      $timeout(function () {
+        $scope.total = 0;
+        $scope.count = 0;
+      }, 200);
     }
 
   };
@@ -251,8 +253,11 @@ angular.module('bescape', ['ionic', 'ngCordova'])
       $scope.count += 1;
       if ($scope.count >= duration) {
         $scope.waiting = false;
-        $scope.count = 0;
-        $scope.total = 0;
+
+        $timeout(function () {
+          $scope.total = 0;
+          $scope.count = 0;
+        }, 200);
 
         // $ionicPlatform.ready(function() {
         //   if ($cordovaVibration) {
