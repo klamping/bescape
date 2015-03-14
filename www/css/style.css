@@ -5,13 +5,57 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-body {
-  color: #999;
-  font-size: 24px;
-  font-family: 'alegreya_sanslight'; }
-
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Eau Douce", "Helvetica", "Arial", "Lucida Grande", "Gill Sans", "Verdana", sans-serif; }
+  color: #225378; }
+
+.pane {
+  background: linear-gradient(150deg, #ACF0F2, #F3FFE2);
+  -webkit-animation: SlowBreathing 6s ease-in-out infinite;
+  animation: SlowBreathing 6s ease-in-out infinite; }
+
+@-webkit-keyframes SlowBreathing {
+  0% {
+    background-position: 50% 0%; }
+
+  50% {
+    background-position: 50% 100%; }
+
+  100% {
+    background-position: 50% 0%; } }
+
+@keyframes SlowBreathing {
+  0% {
+    background-position: 50% 0%; }
+
+  50% {
+    background-position: 50% 100%; }
+
+  100% {
+    background-position: 50% 0%; } }
+
+.wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column;
+  height: 100%;
+  position: relative; }
+  .wrapper .progress-indicators {
+    height: 120px; }
+  .wrapper .slides {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative;
+    height: 100%; }
+    .wrapper .slides .slide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0; }
 
 .progress {
   position: absolute;
@@ -26,14 +70,12 @@ h1, h2, h3, h4, h5, h6 {
     height: 5px; }
   .progress.count-clock, .progress.count-clock > div {
     height: 80px;
-    width: 100%;
-    line-height: 0; }
+    width: 100%; }
   .progress.count-clock svg {
     height: 80px;
     width: 80px;
     position: absolute;
     left: 50%;
-    top: 3px;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%); }
   .progress.ng-hide {
@@ -44,27 +86,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .slide, .slide .prompt, .slide .buttons {
   position: relative;
-  transition: 650ms ease-in-out all; }
+  transition: 750ms ease-in-out all; }
 
-.slide.ng-hide-add {
-  opacity: 1; }
-
-.slide.ng-hide-add-active {
+.slide.ng-hide {
   opacity: 0; }
 
-.slide.ng-hide-remove {
-  opacity: 1; }
+.slide.ng-hide .prompt {
+  -webkit-transform: translateY(25%);
+  transform: translateY(25%); }
 
-.slide.ng-hide-remove-active {
-  opacity: 0; }
+.slide.ng-hide .buttons {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%); }
 
-.slide.ng-hide-add-active .prompt, .slide.ng-hide-remove-active .buttons {
-  -webkit-transform: translateY(-50px);
-  transform: translateY(-50px); }
+.slide.ng-hide-add .prompt {
+  -webkit-transform: translateY(-25%);
+  transform: translateY(-25%); }
 
-.slide.ng-hide-add-active .buttons, .slide.ng-hide-remove-active .prompt {
-  -webkit-transform: translateY(50px);
-  transform: translateY(50px); }
+.slide.ng-hide-add .buttons {
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%); }
 
 .content {
   display: -webkit-flex;
@@ -98,6 +139,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .buttons {
   text-align: right;
-  padding-right: 1em;
-  padding-bottom: 1em;
+  padding-right: 1.5em;
+  padding-bottom: 2em;
   width: 100%; }

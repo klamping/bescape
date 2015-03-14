@@ -20,45 +20,45 @@ angular.module('bescape', ['ionic', 'ngCordova'])
 
 .value('slides', [
   {
-    prompt: '<h1>Bescape</h1><p>Mindfulness for your busy life</p>',
+    prompt: '<h2>Bescape</h2><p>Mindfulness for your busy life</p>',
     buttons: [{
       action: 'advanceSlide()',
       text: 'Start your Session',
       type: 'calm'
     }]
   },
+  // {
+  //   prompt: '<p>If possible, silence your phone</p>',
+  //   buttons: [{
+  //     action: 'advanceSlide()',
+  //     text: 'Okay',
+  //     type: 'balanced'
+  //   }]
+  // },
+  // {
+  //   prompt: '<p>Are you in a calm environment?</p>',
+  //   buttons: [{
+  //       type: 'calm',
+  //       text: 'Yes',
+  //       action: 'advanceSlide(2)'
+  //   }, {
+  //       type: 'royal',
+  //       text: 'No',
+  //       action: 'advanceSlide()'
+  //   }]
+  // },
+  // {
+  //   prompt: '<p>That\'s okay. Life is hectic sometimes. It\'s why this app exists.</p><p>If possible, try going for a walk to avoid interruptions, or escape to a solitary room.</p>',
+  //   buttons: [{
+  //       type: 'royal',
+  //       text: 'Okay',
+  //       action: 'advanceSlide()'
+  //   }]
+  // },
   {
-    prompt: '<p>If possible, silence your phone</p>',
+    prompt: '<p>Take a moment and feel your heart beat in your chest.</p><p>Is it racing or is it calm?</p>',
     buttons: [{
-      action: 'advanceSlide()',
-      text: 'Okay',
-      type: 'balanced'
-    }]
-  },
-  {
-    prompt: '<p>Are you in a "calm" environment?</p>',
-    buttons: [{
-        type: 'calm',
-        text: 'Yes',
-        action: 'advanceSlide(2)'
-    }, {
-        type: 'royal',
-        text: 'No',
-        action: 'advanceSlide()'
-    }]
-  },
-  {
-    prompt: '<p>That\'s okay. Life is hectic sometimes. It\'s why this app exists.</p><p>If possible, try going for a walk to avoid interruptions, or escape to a solitary room.</p>',
-    buttons: [{
-        type: 'royal',
-        text: 'Okay',
-        action: 'advanceSlide()'
-    }]
-  },
-  {
-    prompt: '<p>Feel your heart beat in your chest.</p><p>Is it racing or is it calm?</p>',
-    buttons: [{
-        type: 'positive',
+        type: 'assertive',
         text: 'It\'s Racing',
         action: 'advanceSlide()'
     }, {
@@ -76,7 +76,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<p>Now focus on your breathing.</p><p>Draw in six deep breaths. Feel yourself breathing in and out.</p><p><strong>Hold the button while breathing in, and release it as you breath out.</strong></p>',
+    prompt: '<p>Now focus on your breathing.</p><p>Draw in six deep breaths. Feel yourself breathing in and out.</p><p><strong>Hold the button as you breath in, and release it as you breath out.</strong></p>',
     buttons: [{
         type: 'calm',
         text: 'I\'m Breathing.',
@@ -90,7 +90,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
         text: 'I\'m feeling relaxed.',
         action: 'advanceSlide(2)'
     }, {
-        type: 'positive',
+        type: 'assertive',
         text: 'I\'m still tense.',
         action: 'advanceSlide()'
     }]
@@ -104,7 +104,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<div class="wait-spinner" ng-show="waiting"><ion-spinner icon="ripple"></ion-spinner></div><p>Listen to the sounds around you. Are they loud, soft, or in-between?</p><p><strong>Hold the button for 15 seconds while you listen to your world.</strong></p>',
+    prompt: '<p>Listen to the sounds around you. Are they loud, soft, or in-between?</p><p><strong>Hold the button for 15 seconds while you listen to your world.</strong></p>',
     buttons: [{
         type: 'calm',
         text: 'I\'m Listening',
@@ -113,7 +113,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<div class="wait-spinner" ng-show="waiting"><ion-spinner icon="ripple"></ion-spinner></div><p>Look around you. Notice any interesting colors or patterns?</p><p>Hold the button for another 15 seconds while you experience the sights.</p><!-- <p>It will vibrate when complete.</p> -->',
+    prompt: '<p>Look around you. Notice any interesting colors or patterns?</p><p>Hold the button for another 15 seconds while you experience the sights.</p><!-- <p>It will vibrate when complete.</p> -->',
     buttons: [{
         type: 'calm',
         text: 'I\'m Seeing',
@@ -223,41 +223,65 @@ angular.module('bescape', ['ionic', 'ngCordova'])
   };
 
   $scope.count = 0;
-  $scope.total = 0;
+  $scope.countTotal = 0;
+
+  var line = new ProgressBar.Line('#count-bar', {
+    color: '#3767A8',
+    trailColor: '#9DCAE5',
+    duration: 700,
+    easing: 'easeOut'
+  });
+
   $scope.countThenAdvance = function (total) {
-    $scope.total = total;
+    $scope.countTotal = total;
     $scope.count++;
+
+    var percent = $scope.count / $scope.countTotal;
+    line.animate(percent);
+
     if ($scope.count === total) {
       $scope.advanceSlide();
       $timeout(function () {
-        $scope.total = 0;
+        $scope.countTotal = 0;
         $scope.count = 0;
-      }, 200);
+        line.set(0);
+      }, 250);
     }
-
   };
 
   $scope.waiting = false;
-
-  $scope.startWait = function () {
-    $scope.waiting = true;
-  };
+  var seconds = new ProgressBar.Circle('#wait-clock', {
+      color: '#3767A8',
+      trailColor: '#9DCAE5',
+      strokeWidth: 2
+  });
 
   $scope.waitThenAdvance = function (duration, distance) {
     $scope.waiting = true;
 
-    $scope.count = 0;
+    duration = 2;
+
+
+
+    // $scope.count = 0;
     $scope.total = duration;
 
     waiter = $interval(function () {
       $scope.count += 1;
-      if ($scope.count >= duration) {
+
+      seconds.animate($scope.count / duration, {
+          duration: 200
+      }, function() {
+        seconds.setText($scope.count);
+      });
+
+      if ($scope.count > duration) {
         $scope.waiting = false;
 
-        $timeout(function () {
-          $scope.total = 0;
-          $scope.count = 0;
-        }, 200);
+        $scope.total = 0;
+        $scope.count = 0;
+        seconds.set(0);
+        seconds.setText('');
 
         // $ionicPlatform.ready(function() {
         //   if ($cordovaVibration) {
@@ -272,9 +296,11 @@ angular.module('bescape', ['ionic', 'ngCordova'])
   };
 
   $scope.cancelAdvance = function () {
+    // seconds.set(0);
+    // seconds.setText('');
     $scope.waiting = false;
-    $scope.count = 0;
-    $scope.total = 0;
+    // $scope.count = 0;
+    // $scope.total = 0;
     $interval.cancel(waiter);
   };
 });

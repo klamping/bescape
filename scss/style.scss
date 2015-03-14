@@ -6,15 +6,43 @@ html {
   box-sizing: inherit;
 }
 
-body {
-  color: #999;
-  font-size: 24px;
-  // font-family: "Arvo", monospace, Rockwell, serif;
-  font-family: 'alegreya_sanslight';
+h1, h2, h3, h4, h5, h6 {
+  color: #225378;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Eau Douce", "Helvetica", "Arial", "Lucida Grande", "Gill Sans", "Verdana", sans-serif;
+.pane {
+  background: linear-gradient(150deg, #ACF0F2, #F3FFE2);
+  // background-size: 200% 200%;
+  animation: SlowBreathing 6s ease-in-out infinite;
+}
+
+@keyframes SlowBreathing {
+  0%{background-position:50% 0%}
+  50%{background-position:50% 100%}
+  100%{background-position:50% 0%}
+}
+.wrapper {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  position: relative;
+
+  .progress-indicators {
+    height: 120px;
+  }
+  .slides {
+    flex: 1;
+    position: relative;
+    height: 100%;
+
+    .slide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
 }
 
 .progress {
@@ -34,14 +62,12 @@ h1, h2, h3, h4, h5, h6 {
   &.count-clock > div {
     height: 80px;
     width: 100%;
-    line-height: 0;
   }
   &.count-clock svg {
     height: 80px;
     width: 80px;
     position: absolute;
     left: 50%;
-    top: 3px;
     transform: translateX(-50%);
   }
 
@@ -58,29 +84,28 @@ h1, h2, h3, h4, h5, h6 {
 .slide .prompt,
 .slide .buttons {
   position: relative;
-  transition: 650ms ease-in-out all;
+  transition: 750ms ease-in-out all;
 }
 
-.slide.ng-hide-add {
-  opacity: 1;
-}
-.slide.ng-hide-add-active {
-  opacity: 0;
-}
-.slide.ng-hide-remove {
-  opacity: 1;
-}
-.slide.ng-hide-remove-active {
+// ng-hide-remove means that 'ng-hide' is being removed
+.slide.ng-hide {
   opacity: 0;
 }
 
-.slide.ng-hide-add-active .prompt,
-.slide.ng-hide-remove-active .buttons {
-  transform: translateY(-50px);
+// starting point
+.slide.ng-hide .prompt {
+  transform: translateY(25%);
 }
-.slide.ng-hide-add-active .buttons,
-.slide.ng-hide-remove-active .prompt {
-  transform: translateY(50px);
+.slide.ng-hide .buttons {
+  transform: translateY(-100%);
+}
+
+// ending point
+.slide.ng-hide-add .prompt {
+  transform: translateY(-25%);
+}
+.slide.ng-hide-add .buttons {
+  transform: translateY(100%);
 }
 
 
@@ -103,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .buttons {
   text-align: right;
-  padding-right: 1em;
-  padding-bottom: 1em;
+  padding-right: 1.5em;
+  padding-bottom: 2em;
   width: 100%;
 }
