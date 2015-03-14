@@ -78,7 +78,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
   {
     prompt: '<p>Now focus on your breathing.</p><p>Draw in six deep breaths. Feel yourself breathing in and out.</p><p><strong>Hold the button as you breath in, and release it as you breath out.</strong></p>',
     buttons: [{
-        type: 'calm',
+        type: 'calm breath',
         text: 'I\'m Breathing.',
         action: 'countThenAdvance(6)'
     }]
