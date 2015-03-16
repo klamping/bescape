@@ -27,34 +27,6 @@ angular.module('bescape', ['ionic', 'ngCordova'])
       type: 'calm'
     }]
   },
-  // {
-  //   prompt: '<p>If possible, silence your phone</p>',
-  //   buttons: [{
-  //     action: 'advanceSlide()',
-  //     text: 'Okay',
-  //     type: 'balanced'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Are you in a calm environment?</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'Yes',
-  //       action: 'advanceSlide(2)'
-  //   }, {
-  //       type: 'royal',
-  //       text: 'No',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
-  {
-    prompt: '<p>That\'s okay. Life is hectic sometimes. It\'s why this app exists.</p><p>If possible, try going for a walk to avoid interruptions, or escape to a solitary room.</p>',
-    buttons: [{
-        type: 'royal',
-        text: 'Okay',
-        action: 'advanceSlide()'
-    }]
-  },
   {
     prompt: '<p>Take a moment and feel your heart beat in your chest.</p><p>Is it racing or is it calm?</p>',
     buttons: [{
@@ -309,3 +281,34 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     $interval.cancel(waiter);
   };
 });
+
+
+
+  // {
+  //   prompt: '<p>If possible, silence your phone</p>',
+  //   buttons: [{
+  //     action: 'advanceSlide()',
+  //     text: 'Okay',
+  //     type: 'balanced'
+  //   }]
+  // },
+  // {
+  //   prompt: '<p>Are you in a calm environment?</p>',
+  //   buttons: [{
+  //       type: 'calm',
+  //       text: 'Yes',
+  //       action: 'advanceSlide(2)'
+  //   }, {
+  //       type: 'royal',
+  //       text: 'No',
+  //       action: 'advanceSlide()'
+  //   }]
+  // },
+  // {
+  //   prompt: '<p>That\'s okay. Life is hectic sometimes. It\'s why this app exists.</p><p>If possible, try going for a walk to avoid interruptions, or escape to a solitary room.</p>',
+  //   buttons: [{
+  //       type: 'royal',
+  //       text: 'Okay',
+  //       action: 'advanceSlide()'
+  //   }]
+  // },
