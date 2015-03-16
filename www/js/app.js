@@ -47,155 +47,155 @@ angular.module('bescape', ['ionic', 'ngCordova'])
   //       action: 'advanceSlide()'
   //   }]
   // },
-  // {
-  //   prompt: '<p>That\'s okay. Life is hectic sometimes. It\'s why this app exists.</p><p>If possible, try going for a walk to avoid interruptions, or escape to a solitary room.</p>',
-  //   buttons: [{
-  //       type: 'royal',
-  //       text: 'Okay',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Take a moment and feel your heart beat in your chest.</p><p>Is it racing or is it calm?</p>',
-  //   buttons: [{
-  //       type: 'assertive',
-  //       text: 'It\'s Racing',
-  //       action: 'advanceSlide()'
-  //   }, {
-  //       type: 'calm',
-  //       text: 'It\'s Calm',
-  //       action: 'advanceSlide(2)'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Take a few extra moments to slow down.</p><p>Take a deep breath and settle in, letting your racing heart calm.</p>',
-  //   buttons: [{
-  //       type: 'positive',
-  //       text: 'I\'m slowing down.',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Now focus on your breathing.</p><p>Draw in six deep breaths. Feel yourself breathing in and out.</p><p><strong>Hold the button as you breath in, and release it as you breath out.</strong></p>',
-  //   buttons: [{
-  //       type: 'calm breath',
-  //       text: 'I\'m Breathing.',
-  //       action: 'countThenAdvance(6)'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Notice the places in your body where there is tension or pain.</p><p>This could be at your shoulders, core, back, or even your pursed lips.</p><p>Tighten completely, then let go of your tension with your awareness of it.</p>',
-  //   buttons: [{
-  //       type: 'assertive',
-  //       text: 'I\'m still tense.',
-  //       action: 'advanceSlide()'
-  //   }, {
-  //       type: 'calm',
-  //       text: 'I\'m feeling relaxed.',
-  //       action: 'advanceSlide(2)'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>That\'s okay. Life can be stressful. We don\'t always have time to relax.</p><p>Notice the places in your body where you do feel relaxed.</p><p>See if you can enhance your relaxation in those place.</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m relaxing.',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Listen to the sounds around you. Are they loud, soft, or in-between?</p><p><strong>Hold the button for 15 seconds while you listen to your world.</strong></p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m Listening',
-  //       hold: 'waitThenAdvance(15)',
-  //       release: 'cancelAdvance()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Look around you. Notice any interesting colors or patterns?</p><p>Hold the button for another 15 seconds while you experience the sights.</p><!-- <p>It will vibrate when complete.</p> -->',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m Seeing',
-  //       hold: 'waitThenAdvance(15)',
-  //       release: 'cancelAdvance()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Time for your thoughts.</p><p>As you listen, focus on being non-judgemental.</p><p>Each thought is neither good nor bad, it just is.</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m non-judgemental.',
-  //       action: 'advanceSlide()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Take a moment on each thought and accept it.</p><p>After a moment, let it go and allow another to rise up.</p><p>Hold the button for each thought, releasing when your done. Do this five times.</p>',
-  //   buttons: [{
-  //       type: 'calm breath',
-  //       text: 'I\'m Processing.',
-  //       action: 'countThenAdvance(5)'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Did you have any fear or anxiety with these thoughts?</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'Yes',
-  //       action: 'advanceSlide()'
-  //   }, {
-  //       type: 'positive',
-  //       text: 'No',
-  //       action: 'advanceSlide(2)'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Can you transform that fear?</p><p>Can you radically accept it?</p><p>Don\'t worry, you don\'t have to have find an answer right now. Just process.</p><p>Hold the button for 15 seconds while you think.</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m Transforming',
-  //       hold: 'waitThenAdvance(15)',
-  //       release: 'cancelAdvance()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Focus on your breathing once more.</p><p>Draw in six deep breaths.</p><p>Hold the button while breathing in, and release it as you breath out.</p>',
-  //   buttons: [{
-  //       type: 'calm breath',
-  //       text: 'I\'m Breathing.',
-  //       action: 'countThenAdvance(6)'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Think to yourself, what is your happiness today?</p><p>Once you find it, consider how you can maintain it.</p><p>Hold the button for 15 seconds while you think.</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m Finding Happiness.',
-  //       hold: 'waitThenAdvance(15)',
-  //       release: 'cancelAdvance()'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Happiness can also bring fear.</p><p>As humans, we accept both the strength and the weakness as eqaul parts.</p><p>Did you have any fear or anxiety with these thoughts?</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'Yes',
-  //       action: 'advanceSlide()'
-  //   }, {
-  //       type: 'positive',
-  //       text: 'No',
-  //       action: 'advanceSlide(2)'
-  //   }]
-  // },
-  // {
-  //   prompt: '<p>Think about your fear. Will your fear prevent you from maintaining your happiness and aspirations?</p><p>Hold the button for 15 seconds and think.</p>',
-  //   buttons: [{
-  //       type: 'calm',
-  //       text: 'I\'m Accepting Fear.',
-  //       hold: 'waitThenAdvance(15)',
-  //       release: 'cancelAdvance()'
-  //   }]
-  // },
+  {
+    prompt: '<p>That\'s okay. Life is hectic sometimes. It\'s why this app exists.</p><p>If possible, try going for a walk to avoid interruptions, or escape to a solitary room.</p>',
+    buttons: [{
+        type: 'royal',
+        text: 'Okay',
+        action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<p>Take a moment and feel your heart beat in your chest.</p><p>Is it racing or is it calm?</p>',
+    buttons: [{
+        type: 'assertive',
+        text: 'It\'s Racing',
+        action: 'advanceSlide()'
+    }, {
+        type: 'calm',
+        text: 'It\'s Calm',
+        action: 'advanceSlide(2)'
+    }]
+  },
+  {
+    prompt: '<p>Take a few extra moments to slow down.</p><p>Take a deep breath and settle in, letting your racing heart calm.</p>',
+    buttons: [{
+        type: 'positive',
+        text: 'I\'m slowing down.',
+        action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<p>Now focus on your breathing.</p><p>Draw in six deep breaths. Feel yourself breathing in and out.</p><p><strong>Hold the button as you breath in, and release it as you breath out.</strong></p>',
+    buttons: [{
+        type: 'calm breath',
+        text: 'I\'m Breathing.',
+        action: 'countThenAdvance(6)'
+    }]
+  },
+  {
+    prompt: '<p>Notice the places in your body where there is tension or pain.</p><p>This could be at your shoulders, core, back, or even your pursed lips.</p><p>Tighten completely, then let go of your tension with your awareness of it.</p>',
+    buttons: [{
+        type: 'assertive',
+        text: 'I\'m still tense.',
+        action: 'advanceSlide()'
+    }, {
+        type: 'calm',
+        text: 'I\'m feeling relaxed.',
+        action: 'advanceSlide(2)'
+    }]
+  },
+  {
+    prompt: '<p>That\'s okay. Life can be stressful. We don\'t always have time to relax.</p><p>Notice the places in your body where you do feel relaxed.</p><p>See if you can enhance your relaxation in those place.</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m relaxing.',
+        action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<p>Listen to the sounds around you. Are they loud, soft, or in-between?</p><p><strong>Hold the button for 15 seconds while you listen to your world.</strong></p>',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m Listening',
+        hold: 'waitThenAdvance(15)',
+        release: 'cancelAdvance()'
+    }]
+  },
+  {
+    prompt: '<p>Look around you. Notice any interesting colors or patterns?</p><p>Hold the button for another 15 seconds while you experience the sights.</p><!-- <p>It will vibrate when complete.</p> -->',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m Seeing',
+        hold: 'waitThenAdvance(15)',
+        release: 'cancelAdvance()'
+    }]
+  },
+  {
+    prompt: '<p>Time for your thoughts.</p><p>As you listen, focus on being non-judgemental.</p><p>Each thought is neither good nor bad, it just is.</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m non-judgemental.',
+        action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<p>Take a moment on each thought and accept it.</p><p>After a moment, let it go and allow another to rise up.</p><p>Hold the button for each thought, releasing when your done. Do this five times.</p>',
+    buttons: [{
+        type: 'calm breath',
+        text: 'I\'m Processing.',
+        action: 'countThenAdvance(5)'
+    }]
+  },
+  {
+    prompt: '<p>Did you have any fear or anxiety with these thoughts?</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'Yes',
+        action: 'advanceSlide()'
+    }, {
+        type: 'positive',
+        text: 'No',
+        action: 'advanceSlide(2)'
+    }]
+  },
+  {
+    prompt: '<p>Can you transform that fear?</p><p>Can you radically accept it?</p><p>Don\'t worry, you don\'t have to have find an answer right now. Just process.</p><p>Hold the button for 15 seconds while you think.</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m Transforming',
+        hold: 'waitThenAdvance(15)',
+        release: 'cancelAdvance()'
+    }]
+  },
+  {
+    prompt: '<p>Focus on your breathing once more.</p><p>Draw in six deep breaths.</p><p>Hold the button while breathing in, and release it as you breath out.</p>',
+    buttons: [{
+        type: 'calm breath',
+        text: 'I\'m Breathing.',
+        action: 'countThenAdvance(6)'
+    }]
+  },
+  {
+    prompt: '<p>Think to yourself, what is your happiness today?</p><p>Once you find it, consider how you can maintain it.</p><p>Hold the button for 15 seconds while you think.</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m Finding Happiness.',
+        hold: 'waitThenAdvance(15)',
+        release: 'cancelAdvance()'
+    }]
+  },
+  {
+    prompt: '<p>Happiness can also bring fear.</p><p>As humans, we accept both the strength and the weakness as eqaul parts.</p><p>Did you have any fear or anxiety with these thoughts?</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'Yes',
+        action: 'advanceSlide()'
+    }, {
+        type: 'positive',
+        text: 'No',
+        action: 'advanceSlide(2)'
+    }]
+  },
+  {
+    prompt: '<p>Think about your fear. Will your fear prevent you from maintaining your happiness and aspirations?</p><p>Hold the button for 15 seconds and think.</p>',
+    buttons: [{
+        type: 'calm',
+        text: 'I\'m Accepting Fear.',
+        hold: 'waitThenAdvance(15)',
+        release: 'cancelAdvance()'
+    }]
+  },
   {
     prompt: '<p>Focus on your breathing one last time.</p><p>Press the button down, take one deep breath, let go and return to the world.</p>',
     buttons: [{
