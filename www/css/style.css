@@ -9,10 +9,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #225378; }
 
 .pane {
-  background: linear-gradient(165deg, #FFFEF0, #FFF6D5);
-  background-size: 100% 300%;
-  -webkit-animation: SlowBreathing 4s ease-in-out infinite;
-  animation: SlowBreathing 4s ease-in-out infinite; }
+  background: #FFFFE4; }
 
 @-webkit-keyframes SlowBreathing {
   0% {
@@ -141,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 .buttons {
   text-align: right;
   padding-right: 1.5em;
-  padding-bottom: 2em;
+  padding-bottom: 3em;
   width: 100%; }
   .buttons .button.breath {
     position: relative;

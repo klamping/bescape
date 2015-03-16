@@ -12,10 +12,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .pane {
   // background: linear-gradient(160deg, #ACF0F2, #F3FFE2);
-  // background: linear-gradient(160deg, #000, #FFFFE4);
-  background: linear-gradient(165deg, #FFFEF0, #FFF6D5);
-  background-size: 100% 300%;
-  animation: SlowBreathing 4s ease-in-out infinite;
+  // background: linear-gradient(160deg, #000, #);
+  // background: linear-gradient(165deg, #FFFEF0, #FFF6D5);
+  // background-size: 100% 100%;
+  // animation: SlowBreathing 4s ease-in-out infinite;
+  background: #FFFFE4;
 }
 
 @keyframes SlowBreathing {
@@ -131,12 +132,12 @@ h1, h2, h3, h4, h5, h6 {
 .buttons {
   text-align: right;
   padding-right: 1.5em;
-  padding-bottom: 2em;
+  padding-bottom: 3em;
   width: 100%;
 
   .button.breath {
     position: relative;
-      opacity: 1;
+    opacity: 1;
 
     &:after {
       position: absolute;

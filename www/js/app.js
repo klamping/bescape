@@ -132,7 +132,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
   {
     prompt: '<p>Take a moment on each thought and accept it.</p><p>After a moment, let it go and allow another to rise up.</p><p>Hold the button for each thought, releasing when your done. Do this five times.</p>',
     buttons: [{
-        type: 'calm',
+        type: 'calm breath',
         text: 'I\'m Processing.',
         action: 'countThenAdvance(5)'
     }]
@@ -150,7 +150,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<p>What is your greatest fear about your thoughts?</p><p>Can you transform that fear?</p><p>Don\'t worry, you don\'t have to have find an answer right now. Just process.</p><p>Hold the button for 15 seconds while you think.</p>',
+    prompt: '<p>Can you transform that fear?</p><p>Can you radically accept it?</p><p>Don\'t worry, you don\'t have to have find an answer right now. Just process.</p><p>Hold the button for 15 seconds while you think.</p>',
     buttons: [{
         type: 'calm',
         text: 'I\'m Transforming',
@@ -161,7 +161,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
   {
     prompt: '<p>Focus on your breathing once more.</p><p>Draw in six deep breaths.</p><p>Hold the button while breathing in, and release it as you breath out.</p>',
     buttons: [{
-        type: 'calm',
+        type: 'calm breath',
         text: 'I\'m Breathing.',
         action: 'countThenAdvance(6)'
     }]
@@ -197,7 +197,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<p>Focus on your breathing one last time.</p><p>Take one big, deep breath and return to the world.</p><p>This is you, alive and breathing.</p>',
+    prompt: '<p>Focus on your breathing one last time.</p><p>Press the button down, take one deep breath, let go and return to the world.</p>',
     buttons: [{
         type: 'balanced',
         text: 'I am Complete.',
@@ -205,7 +205,7 @@ angular.module('bescape', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<p>If you can, take a few moments to write down any insights you\'ve had.</p><p>When ready, return to your day in your own time.</p>'
+    prompt: '<p>This is you, alive and breathing.</p><p>When ready, return to your day in your own time.</p>'
   }
 ])
 
@@ -283,11 +283,11 @@ angular.module('bescape', ['ionic', 'ngCordova'])
         seconds.set(0);
         seconds.setText('');
 
-        // $ionicPlatform.ready(function() {
-        //   if ($cordovaVibration) {
-        //     $cordovaVibration.vibrate(100);
-        //   }
-        // });
+        $ionicPlatform.ready(function() {
+          if ($cordovaVibration) {
+            $cordovaVibration.vibrate(100);
+          }
+        });
 
         $interval.cancel(waiter);
         $scope.advanceSlide(distance);
