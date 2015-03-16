@@ -259,10 +259,6 @@ angular.module('bescape', ['ionic', 'ngCordova'])
   $scope.waitThenAdvance = function (duration, distance) {
     $scope.waiting = true;
 
-    duration = 2;
-
-
-
     // $scope.count = 0;
     $scope.total = duration;
 
