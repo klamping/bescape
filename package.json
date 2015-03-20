@@ -1,7 +1,7 @@
 {
-  "name": "bescape",
-  "version": "1.0.0",
-  "description": "bescape: An Ionic project",
+  "name": "busymind",
+  "version": "0.2.0",
+  "description": "Busymind: Mindful Meditation for busy people",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",

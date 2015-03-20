@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.bescape550966" version="0.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>bescape</name>
+<widget id="com.ionicframework.busymind"
+  xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"
+  android-versionCode="3" version="0.2.0">
+  <name>Busymind</name>
   <description>
-        A mindfulness meditation app for busy people
-    </description>
+    A mindfulness meditation app for busy people
+  </description>
   <author email="klamping@gmail.com" href="http://kevinlamping.com/">
-      Kevin Lamping
-    </author>
+    Kevin Lamping
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>

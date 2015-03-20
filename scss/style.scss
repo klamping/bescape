@@ -16,14 +16,14 @@ h1, h2, h3, h4, h5, h6 {
   // background: linear-gradient(165deg, #FFFEF0, #FFF6D5);
   // background-size: 100% 100%;
   // animation: SlowBreathing 4s ease-in-out infinite;
-  background: #EEECE1;
+  background: #EEECE1 url(../img/white_texture.png);
 }
 
-@keyframes SlowBreathing {
-  0%{background-position:50% 0%}
-  50%{background-position:50% 100%}
-  100%{background-position:50% 0%}
-}
+// @keyframes SlowBreathing {
+//   0%{background-position:50% 0%}
+//   50%{background-position:50% 100%}
+//   100%{background-position:50% 0%}
+// }
 .wrapper {
   display: flex;
   flex-flow: column;
@@ -157,8 +157,8 @@ h1, h2, h3, h4, h5, h6 {
 
     &.activated:after {
       transition: all 8s cubic-bezier(0.165, 0.84, 0.44, 1);
-      width: 300px;
-      height: 300px;
+      width: 200px;
+      height: 200px;
     }
 
   }
