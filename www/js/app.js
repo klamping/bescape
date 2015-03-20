@@ -82,7 +82,7 @@ angular.module('busymind', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<p>Come back to now. Did you notice any fear or anxiety in your thoughts?</p>',
+    prompt: '<p>Return to this moment. Did you notice any fear or anxiety in your thoughts?</p>',
     buttons: [{
       type: 'calm',
       text: 'Yes',
@@ -229,23 +229,23 @@ angular.module('busymind', ['ionic', 'ngCordova'])
 
       seconds.animate($scope.count / duration, {
         duration: 200
-    }, function() {
-      seconds.setText($scope.count);
-    });
+      }, function() {
+        seconds.setText($scope.count);
+      });
 
       if ($scope.count > duration) {
-      $scope.waiting = false;
+        $scope.waiting = false;
 
-      $scope.total = 0;
+        $scope.total = 0;
         $scope.count = 0;
         seconds.set(0);
         seconds.setText('');
 
-        // $ionicPlatform.ready(function() {
-      //   if ($cordovaVibration) {
-      //     $cordovaVibration.vibrate(100);
-      //   }
-      // });
+        try {
+          $cordovaVibration.vibrate(100);
+        } catch (e) {
+          // if vibration fails, no biggie
+        }
 
         $interval.cancel(waiter);
         $scope.advanceSlide(distance);
