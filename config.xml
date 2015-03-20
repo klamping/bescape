@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.busymind"
+<widget id="com.ionicframework.bescape550966"
   xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"
-  android-versionCode="3" version="0.2.0">
+  android-versionCode="3" versionCode="3"
+  version="0.2.0">
   <name>Busymind</name>
   <description>
     A mindfulness meditation app for busy people
