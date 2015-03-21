@@ -15,7 +15,7 @@ angular.module('busymind', ['ionic', 'ngCordova'])
 
 .value('slides', [
   {
-    prompt: '<h2>Busymind</h2><p>Mindfulness for your busy life</p>',
+    prompt: '<h1 class="app-name">Busymind</h1><p>Mindfulness for your busy life</p>',
     buttons: [{
       action: 'advanceSlide()',
       text: 'Begin your Session',
@@ -73,7 +73,7 @@ angular.module('busymind', ['ionic', 'ngCordova'])
     }]
   },
   {
-    prompt: '<p>Draw back inward.</p><p>Observe your internal dialogue.</p><p>Let thoughts rise up.</p><p>Take 15 seconds to let your mind wander.</p>',
+    prompt: '<p>Draw back inward.</p><p>Observe your internal dialogue.</p><p>Let your thoughts rise up.</p><p>Take 15 seconds to let your mind wander.</p>',
     buttons: [{
       type: 'calm',
       text: 'I\'m wandering',
@@ -90,7 +90,7 @@ angular.module('busymind', ['ionic', 'ngCordova'])
     }, {
       type: 'positive',
       text: 'No',
-      action: 'advanceSlide(2)'
+      action: 'advanceSlide(3)'
     }]
   },
   {

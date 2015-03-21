@@ -23,30 +23,27 @@
     <script src="js/app.js"></script>
   </head>
   <body ng-app="busymind" ng-controller="busymindCtrl">
-
-    <ion-pane>
-      <ion-content>
-        <div class="wrapper">
-          <div class="progress-indicators">
-            <div class="progress count-clock" ng-show="waiting">
-              <div id="wait-clock"></div>
-            </div>
-            <div id="count-bar" class="progress count-bar" ng-show="countTotal > 0"></div>
+    <ion-content overflow-scroll="false" scrollbar-y="false">
+      <div class="wrapper">
+        <div class="progress-indicators">
+          <div class="progress count-clock" ng-show="waiting">
+            <div id="wait-clock"></div>
           </div>
+          <div id="count-bar" class="progress count-bar" ng-show="countTotal > 0"></div>
+        </div>
 
-          <div class="slides">
-            <div class="slide" ng-repeat="slide in slides" ng-show="$index === activeSlide">
-              <div class="content">
-                <div ng-bind-html="slide.prompt" class="prompt"></div>
-                <div class="buttons">
-                  <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" ng-click="{{button.action}}" ng-if="button.action" ng-bind="button.text"></button>
-                  <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" on-touch="{{button.hold}}" on-release="{{button.release}}" ng-if="button.hold" ng-bind="button.text"></button>
-                </div>
+        <div class="slides">
+          <div class="slide" ng-repeat="slide in slides" ng-show="$index === activeSlide">
+            <div class="content">
+              <div ng-bind-html="slide.prompt" class="prompt"></div>
+              <div class="buttons">
+                <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" ng-click="{{button.action}}" ng-if="button.action" ng-bind="button.text"></button>
+                <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" on-touch="{{button.hold}}" on-release="{{button.release}}" ng-if="button.hold" ng-bind="button.text"></button>
               </div>
             </div>
           </div>
         </div>
-      </ion-content>
-    </ion-pane>
+      </div>
+    </ion-content>
   </body>
 </html>
