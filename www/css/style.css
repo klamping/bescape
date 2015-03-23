@@ -19,9 +19,6 @@ html {
 h1, h2, h3, h4, h5, h6 {
   color: #225378; }
 
-.pane {
-  background: #EEECE1 url(../img/white_texture.png); }
-
 .wrapper {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,7 +27,8 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-flow: column;
   flex-flow: column;
   height: 100%;
-  position: relative; }
+  position: relative;
+  background: #EEECE1 url(../img/white_texture.png); }
   .wrapper .progress-indicators {
     height: 100px;
     position: relative; }
