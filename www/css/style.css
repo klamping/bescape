@@ -137,7 +137,8 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%; }
   .buttons .button.breath {
     position: relative;
-    opacity: 1; }
+    opacity: 1;
+    z-index: 2; }
     .buttons .button.breath:after {
       position: absolute;
       left: 50%;
@@ -151,10 +152,10 @@ h1, h2, h3, h4, h5, h6 {
       height: 0;
       content: "";
       background: #225378;
-      transition: all 1500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transition: all 4s cubic-bezier(0.29, 0.9, 0.79, 1);
       z-index: -1;
       box-shadow: 0 0 1px rgba(0, 0, 0, 0.05); }
     .buttons .button.breath.activated:after {
-      transition: all 8s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition: all 6s cubic-bezier(0.29, 0.9, 0.79, 1);
       width: 200px;
       height: 200px; }
