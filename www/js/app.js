@@ -182,6 +182,11 @@ angular.module('busymind', ['ionic', 'ngCordova'])
 
   $scope.restartSlides = function () {
     $scope.activeSlide = 0;
+    $scope.count = 0;
+    $scope.countTotal = 0;
+    $scope.waiting = false;
+    seconds.set(0);
+    seconds.setText('');
   };
 
   $scope.count = 0;

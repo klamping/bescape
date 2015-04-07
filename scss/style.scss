@@ -26,6 +26,20 @@ h1, h2, h3, h4, h5, h6 {
   color: #225378;
 }
 
+.restart-cta {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: transparent;
+  border: 0;
+  z-index: 10;
+  color: #225378;
+  font-size: 22px;
+  .icon {
+    font-size: 18px;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-flow: column;
@@ -34,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #EEECE1 url(../img/white_texture.png);
 
   .progress-indicators {
-    height: 100px;
+    height: 24%;
     position: relative;
   }
   .slides {
@@ -61,7 +75,6 @@ h1, h2, h3, h4, h5, h6 {
 
   &.count-bar {
     top: 50%;
-    transform: translate(-50%, -50%);
   }
   &.count-bar svg {
     width: 100%;
@@ -74,12 +87,13 @@ h1, h2, h3, h4, h5, h6 {
 
   &.count-clock,
   &.count-clock > div {
-    height: 80px;
+    height: 86px;
     width: 100%;
+    font-size: 28px;
   }
   &.count-clock svg {
-    height: 80px;
-    width: 80px;
+    height: 100%;
+    width: 100%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -132,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 .prompt {
-  flex: 1;
+  flex: 3;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -143,8 +157,8 @@ h1, h2, h3, h4, h5, h6 {
 .buttons {
   text-align: right;
   padding-right: 1.5em;
-  padding-bottom: 3em;
   width: 100%;
+  flex: 1;
 
   .button.breath {
     position: relative;

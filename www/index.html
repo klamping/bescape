@@ -24,6 +24,8 @@
   </head>
   <body ng-app="busymind" ng-controller="busymindCtrl">
     <ion-content overflow-scroll="false" scrollbar-y="false">
+      <button class="restart-cta" ng-click="restartSlides()" ng-hide="activeSlide === 0">
+        <i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp;Restart</button>
       <div class="wrapper">
         <div class="progress-indicators">
           <div class="progress count-clock" ng-show="waiting">
