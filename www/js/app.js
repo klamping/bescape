@@ -167,7 +167,7 @@ angular.module('busymind', ['ionic', 'ngCordova'])
   }
 ])
 
-.controller('busymindCtrl', function($scope, $interval, $cordovaVibration, $ionicPlatform, slides, $timeout) {
+.controller('busymindCtrl', function($rootScope, $scope, $interval, $cordovaVibration, $ionicPlatform, slides, $timeout) {
   var waiter;
   $scope.activeSlide = 0;
   $scope.slides = slides;
@@ -227,6 +227,8 @@ angular.module('busymind', ['ionic', 'ngCordova'])
     $scope.waiting = true;
 
     // $scope.count = 0;
+    // FOR DEBUGGING PURPOSES
+    // duration = 1;
     $scope.total = duration;
 
     waiter = $interval(function () {
@@ -265,5 +267,13 @@ angular.module('busymind', ['ionic', 'ngCordova'])
     // $scope.count = 0;
     // $scope.total = 0;
     $interval.cancel(waiter);
+  };
+
+  $ionicPlatform.ready(function() {
+    $scope.canRate = (typeof AppRate !== 'undefined');
+  });
+  $scope.rateApp = function () {
+    AppRate.preferences.storeAppURL.android = 'market://details?id=com.ionicframework.bescape550966';
+    AppRate.promptForRating(true);
   };
 });
