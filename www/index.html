@@ -3,7 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <title>BusyMind - Simple Guided Mindfulness Meditation for Busy People</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- compiled css output -->
     <link href="css/fonts.css" rel="stylesheet">
@@ -24,7 +42,7 @@
   </head>
   <body ng-app="busymind" ng-controller="busymindCtrl">
     <ion-content overflow-scroll="false" scrollbar-y="false">
-      <button class="rate-cta" ng-click="rateApp()" ng-show="canRate"><i class="icon ion-android-favorite-outline"></i></button>
+      <button class="rate-cta" ng-click="rateApp()" ng-show="canRate && activeSlide === 0"><i class="icon ion-android-favorite-outline"></i></button>
       <button class="restart-cta" ng-click="restartSlides()" ng-hide="activeSlide === 0">
         <i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp;Restart</button>
       <div class="wrapper">

@@ -135,9 +135,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2; }
 
 .prompt {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -154,9 +154,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
   padding-right: 1.5em;
   width: 100%;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1; }
+  height: 6em; }
+  .buttons .button {
+    margin-bottom: 10px; }
+  .buttons .button:only-child {
+    margin-top: 1em; }
   .buttons .button.breath {
     position: relative;
     opacity: 1;
@@ -174,10 +176,10 @@ h1, h2, h3, h4, h5, h6 {
       height: 0;
       content: "";
       background: #225378;
-      transition: all 4s cubic-bezier(0.29, 0.9, 0.79, 1);
+      transition: all 4s cubic-bezier(0, 0.7, 0.55, 1);
       z-index: -1;
       box-shadow: 0 0 1px rgba(0, 0, 0, 0.05); }
     .buttons .button.breath.activated:after {
-      transition: all 6s cubic-bezier(0.29, 0.9, 0.79, 1);
+      transition: all 6s cubic-bezier(0, 0.7, 0.55, 1);
       width: 200px;
       height: 200px; }

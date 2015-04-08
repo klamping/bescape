@@ -18,12 +18,62 @@ angular.module('busymind', ['ionic', 'ngCordova'])
     prompt: '<h1 class="app-name">Busymind</h1><p>Mindfulness for your busy life</p>',
     buttons: [{
       action: 'advanceSlide()',
-      text: 'Begin your Session',
+      text: 'Start 1-minute Session',
+      type: 'positive'
+    }, {
+      action: 'advanceSlide(6)',
+      text: 'Start 5-minute Session',
       type: 'calm'
     }]
   },
+
+  // 1-minute session
   {
-    prompt: '<p>Start by focusing on your breath.</p><p>Feel your chest expand and contract. Feel the air move in and out.</p><p><strong>Take five deep breaths, holding the button as you breath in, and releasing it as you breath out.</strong></p>',
+    prompt: '<p>Slow down. Search your body for tension.</p><p>This could be at your shoulders, your back, or your mouth.</p><p>Release the tension let your body sink in to relaxation.</p>',
+    buttons: [{
+      type: 'calm',
+      text: 'I\'m Relaxing',
+      action: 'advanceSlide()'
+    }]
+  },
+  {
+    prompt: '<p>Now focus on your breath.</p><p>As you breath, feel your chest expand and contract. Feel the air move in and out.</p><p><strong>Take four deep breaths, holding the button as you breath in, and releasing it as you breath out.</strong></p>',
+    buttons: [{
+      type: 'calm breath',
+      text: 'I\'m Breathing',
+      action: 'countThenAdvance(4)'
+    }]
+  },
+  {
+    prompt: '<p>Turn outward. Open your mind to the sounds around you.</p><p>What\'s the texture of the noise. Is it loud or quiet?</p><p><strong>Hold the button for 15 seconds while you listen to your world.</strong></p>',
+    buttons: [{
+      type: 'calm',
+      text: 'I\'m Listening',
+      hold: 'waitThenAdvance(15)',
+      release: 'cancelAdvance()'
+    }]
+  },
+  {
+    prompt: '<p>Look around you.</p><p>Find the colors and patterns hiding in plain sight.</p><p>Hold down the button as you look around.</p>',
+    buttons: [{
+      type: 'calm',
+      text: 'I\'m Seeing',
+      hold: 'waitThenAdvance(15)',
+      release: 'cancelAdvance()'
+    }]
+  },
+  {
+    prompt: '<p>When ready, return to your day in your own time.</p>',
+    buttons: [{
+      type: 'calm',
+      text: 'Conclude Session',
+      action: 'restartSlides()'
+    }]
+  },
+
+  // 4-minute session
+  {
+    prompt: '<p>Start by focusing on your breath.</p><p>As you breath, feel your chest expand and contract. Feel the air move in and out.</p><p><strong>Take five deep breaths, holding the button as you breath in, and releasing it as you breath out.</strong></p>',
     buttons: [{
       type: 'calm breath',
       text: 'I\'m Breathing',
@@ -161,7 +211,7 @@ angular.module('busymind', ['ionic', 'ngCordova'])
     prompt: '<p>This is you, alive and well.</p><p>When ready, return to your day in your own time.</p>',
     buttons: [{
       type: 'calm breath',
-      text: 'End Session',
+      text: 'Conclude Session',
       action: 'restartSlides()'
     }]
   }
@@ -261,17 +311,16 @@ angular.module('busymind', ['ionic', 'ngCordova'])
   };
 
   $scope.cancelAdvance = function () {
-    // seconds.set(0);
-    // seconds.setText('');
     $scope.waiting = false;
-    // $scope.count = 0;
-    // $scope.total = 0;
     $interval.cancel(waiter);
   };
 
   $ionicPlatform.ready(function() {
-    $scope.canRate = (typeof AppRate !== 'undefined');
+    $scope.$apply(function () {
+      $scope.canRate = (typeof AppRate !== 'undefined');
+    });
   });
+
   $scope.rateApp = function () {
     AppRate.preferences.storeAppURL.android = 'market://details?id=com.ionicframework.bescape550966';
     AppRate.promptForRating(true);

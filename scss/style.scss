@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 .prompt {
-  flex: 3;
+  flex: 1;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -169,7 +169,14 @@ h1, h2, h3, h4, h5, h6 {
   text-align: right;
   padding-right: 1.5em;
   width: 100%;
-  flex: 1;
+  height: 6em;
+
+  .button {
+    margin-bottom: 10px;
+  }
+  .button:only-child {
+    margin-top: 1em;
+  }
 
   .button.breath {
     position: relative;
@@ -188,13 +195,13 @@ h1, h2, h3, h4, h5, h6 {
       height: 0;
       content: "";
       background: #225378;
-      transition: all 4s cubic-bezier(.29,.9,.79,1);
+      transition: all 4s cubic-bezier(0, 0.7, 0.55, 1);
       z-index: -1;
       box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
     }
 
     &.activated:after {
-      transition: all 6s cubic-bezier(.29,.9,.79,1);
+      transition: all 6s cubic-bezier(0, 0.7, 0.55, 1);
       width: 200px;
       height: 200px;
     }
