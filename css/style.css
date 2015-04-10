@@ -5,31 +5,40 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
+.app-name {
+  font-size: 38px; }
+
+@media all and (min-width: 43.75em) {
+  body {
+    font-size: 34px; }
+  .app-name {
+    font-size: 46px; }
+  .button {
+    font-size: 34px; } }
+
 h1, h2, h3, h4, h5, h6 {
   color: #225378; }
 
-.pane {
-  background: #FFFFE4; }
+.restart-cta {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  background: transparent;
+  border: 0;
+  z-index: 10;
+  color: #225378;
+  font-size: 22px; }
+  .restart-cta .icon {
+    font-size: 18px; }
 
-@-webkit-keyframes SlowBreathing {
-  0% {
-    background-position: 50% 0%; }
-
-  50% {
-    background-position: 50% 100%; }
-
-  100% {
-    background-position: 50% 0%; } }
-
-@keyframes SlowBreathing {
-  0% {
-    background-position: 50% 0%; }
-
-  50% {
-    background-position: 50% 100%; }
-
-  100% {
-    background-position: 50% 0%; } }
+.rate-cta {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background: transparent;
+  border: 0;
+  z-index: 10;
+  color: #E36E4F; }
 
 .wrapper {
   display: -webkit-flex;
@@ -39,9 +48,11 @@ h1, h2, h3, h4, h5, h6 {
   -ms-flex-flow: column;
   flex-flow: column;
   height: 100%;
-  position: relative; }
+  position: relative;
+  background: #EEECE1 url(../img/white_texture.png); }
   .wrapper .progress-indicators {
-    height: 120px; }
+    height: 24%;
+    position: relative; }
   .wrapper .slides {
     -webkit-flex: 1;
     -ms-flex: 1;
@@ -57,21 +68,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .progress {
   position: absolute;
-  top: 5%;
   width: 80%;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   transition: 500ms ease-in-out opacity; }
+  .progress.count-bar {
+    top: 50%; }
   .progress.count-bar svg {
     width: 100%;
     height: 5px; }
+  .progress.count-clock {
+    bottom: 0; }
   .progress.count-clock, .progress.count-clock > div {
-    height: 80px;
-    width: 100%; }
+    height: 86px;
+    width: 100%;
+    font-size: 28px; }
   .progress.count-clock svg {
-    height: 80px;
-    width: 80px;
+    height: 100%;
+    width: 100%;
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -138,11 +153,16 @@ h1, h2, h3, h4, h5, h6 {
 .buttons {
   text-align: right;
   padding-right: 1.5em;
-  padding-bottom: 3em;
-  width: 100%; }
+  width: 100%;
+  height: 6em; }
+  .buttons .button {
+    margin-bottom: 10px; }
+  .buttons .button:only-child {
+    margin-top: 1em; }
   .buttons .button.breath {
     position: relative;
-    opacity: 1; }
+    opacity: 1;
+    z-index: 2; }
     .buttons .button.breath:after {
       position: absolute;
       left: 50%;
@@ -156,9 +176,10 @@ h1, h2, h3, h4, h5, h6 {
       height: 0;
       content: "";
       background: #225378;
-      transition: all 1500ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      z-index: -1; }
+      transition: all 4s cubic-bezier(0, 0.7, 0.55, 1);
+      z-index: -1;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.05); }
     .buttons .button.breath.activated:after {
-      transition: all 8s cubic-bezier(0.165, 0.84, 0.44, 1);
-      width: 300px;
-      height: 300px; }
+      transition: all 6s cubic-bezier(0, 0.7, 0.55, 1);
+      width: 200px;
+      height: 200px; }
