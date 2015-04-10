@@ -7,6 +7,7 @@ var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var sh = require('shelljs');
 var autoprefixer = require('gulp-autoprefixer');
+var ghPages = require('gulp-gh-pages');
 
 var paths = {
   sass: ['./scss/**/*.scss']
@@ -52,4 +53,9 @@ gulp.task('git-check', function(done) {
     process.exit(1);
   }
   done();
+});
+
+gulp.task('deploy', function () {
+  return gulp.src('./www/**/*')
+    .pipe(ghPages());
 });
