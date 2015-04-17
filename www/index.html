@@ -39,9 +39,10 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/slides.js"></script>
   </head>
   <body ng-app="busymind" ng-controller="busymindCtrl">
-    <ion-content overflow-scroll="false" scrollbar-y="false">
+    <ion-content scroll="false">
       <button class="rate-cta" ng-click="rateApp()" ng-show="canRate && activeSlide === 0"><i class="icon ion-android-favorite-outline"></i></button>
       <button class="restart-cta" ng-click="restartSlides()" ng-hide="activeSlide === 0">
         <i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp;Restart</button>
