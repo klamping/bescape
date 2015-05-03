@@ -12,8 +12,10 @@ angular.module('busymind', ['ionic', 'ngCordova', 'gettext'])
     }
 
     if(typeof navigator.globalization !== 'undefined') {
+      gettextCatalog.loadRemote('/translations/template.json');
+
       $cordovaGlobalization.getPreferredLanguage().then(function(language) {
-        gettextCatalog.setCurrentLanguage((language.value).split('-')[0]);
+        gettextCatalog.setCurrentLanguage(language.value);
       });
     }
   });
@@ -44,7 +46,7 @@ angular.module('busymind', ['ionic', 'ngCordova', 'gettext'])
 .controller('busymindCtrl', function($rootScope, $scope, $ionicPlatform, slideManager, waiter) {
   $scope.slideManager = slideManager;
   $scope.waiter = waiter;
-  waiter.setWait(2);
+  waiter.setWait(15);
 
   $ionicPlatform.ready(function() {
     $scope.$apply(function () {

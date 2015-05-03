@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .restart-cta {
   position: absolute;
-  top: 20px;
+  top: 30px;
   padding: 5px 10px;
   background: rgba(255, 255, 255, 0.75);
   border: 0;
@@ -40,12 +40,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .rate-cta {
   position: absolute;
-  top: 20px;
-  right: 5px;
-  background: transparent;
+  top: 30px;
+  right: 0;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.75);
   border: 0;
   z-index: 10;
-  color: #E36E4F; }
+  color: #E36E4F;
+  -webkit-transform: rotate(-0.5deg);
+  transform: rotate(-0.5deg);
+  transition: 500ms ease-out -webkit-transform;
+  transition: 500ms ease-out transform; }
+  .rate-cta.ng-hide {
+    -webkit-transform: rotate(-0.5deg) translateX(100%);
+    transform: rotate(-0.5deg) translateX(100%); }
 
 .wrapper {
   display: -webkit-flex;
@@ -65,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(../img/straws.png);
   background-image: url(../img/subtle_white_feathers.png); }
   .wrapper .progress-indicators {
-    height: 150px;
+    height: 120px;
     position: relative;
     margin: 0 1em; }
   .wrapper .slides {
@@ -89,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   transition: 500ms ease-in-out opacity;
-  bottom: 10px; }
+  bottom: 0; }
   .progress.count-bar svg {
     width: 100%;
     height: 5px; }
@@ -130,6 +138,10 @@ h1, h2, h3, h4, h5, h6 {
 .slide.ng-hide-add .prompt {
   -webkit-transform: translateY(-25%);
   transform: translateY(-25%); }
+
+.slide.ng-hide-add .buttons .button {
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%); }
 
 .content {
   display: -webkit-flex;
@@ -205,11 +217,11 @@ h1, h2, h3, h4, h5, h6 {
       transform-origin: top right;
       -webkit-transform-style: preserve-3D;
       transform-style: preserve-3D;
-      box-shadow: -4px 0 3px rgba(0, 0, 0, 0.1); }
+      box-shadow: -3px -1px 3px rgba(0, 0, 0, 0.1); }
     .buttons .button.button-clear.activated span {
       -webkit-transform: skewY(-1deg) translateX(2px);
       transform: skewY(-1deg) translateX(2px);
-      box-shadow: -1px 0 2px rgba(0, 0, 0, 0.1); }
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
   .buttons .button-clear.active, .buttons .button-clear.activated {
     opacity: 1; }
   .buttons .button.breath {
