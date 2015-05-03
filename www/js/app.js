@@ -1,6 +1,6 @@
-/*globals cordova:false, StatusBar:false, ProgressBar:false, AppRate:false*/
-angular.module('busymind', ['ionic', 'ngCordova'])
-.run(function($ionicPlatform) {
+/*globals cordova:false, StatusBar:false, AppRate:false*/
+angular.module('busymind', ['ionic', 'ngCordova', 'gettext'])
+.run(function($ionicPlatform, $cordovaGlobalization, gettextCatalog) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
@@ -10,104 +10,41 @@ angular.module('busymind', ['ionic', 'ngCordova'])
     if(window.StatusBar) {
       StatusBar.styleDefault();
     }
+
+    if(typeof navigator.globalization !== 'undefined') {
+      $cordovaGlobalization.getPreferredLanguage().then(function(language) {
+        gettextCatalog.setCurrentLanguage((language.value).split('-')[0]);
+      });
+    }
   });
 })
-.controller('busymindCtrl', function($rootScope, $scope, $interval,
-    $cordovaVibration, $ionicPlatform, slides, $timeout) {
-  var waiter;
-  $scope.activeSlide = 0;
-  $scope.slides = slides;
-  $scope.holdDelay = 15;
+.factory('slideManager', function ($rootScope) {
+  var _activeSlide = 0;
+  var slideManager = {};
 
-  $scope.advanceSlide = function (distance) {
+  slideManager.advance = function (distance) {
     if (isNaN(distance)) {
-      $scope.activeSlide++;
-    } else {
-      $scope.activeSlide += distance;
+      distance = 1;
     }
+
+    _activeSlide += 1 * distance;
   };
 
-  $scope.restartSlides = function () {
-    $scope.activeSlide = 0;
-    $scope.count = 0;
-    $scope.countTotal = 0;
-    $scope.waiting = false;
-    seconds.set(0);
-    seconds.setText('');
+  slideManager.reset = function () {
+    _activeSlide = 0;
+    $rootScope.$broadcast('reset');
   };
 
-  $scope.count = 0;
-  $scope.countTotal = 0;
-
-  var line = new ProgressBar.Line('#count-bar', {
-    color: '#3767A8',
-    trailColor: '#9DCAE5',
-    duration: 700,
-    easing: 'easeOut'
-  });
-
-  $scope.countThenAdvance = function (total) {
-    $scope.countTotal = total;
-    $scope.count++;
-
-    var percent = $scope.count / $scope.countTotal;
-    line.animate(percent);
-
-    if ($scope.count === total) {
-      $scope.advanceSlide();
-      $timeout(function () {
-      $scope.countTotal = 0;
-      $scope.count = 0;
-      line.set(0);
-      }, 250);
-    }
+  slideManager.get = function () {
+    return _activeSlide;
   };
 
-  $scope.waiting = false;
-  var seconds = new ProgressBar.Circle('#wait-clock', {
-      color: '#3767A8',
-      trailColor: '#9DCAE5',
-      strokeWidth: 2
-  });
-
-  $scope.waitThenAdvance = function (distance) {
-    $scope.waiting = true;
-
-    $scope.total = $scope.holdDelay;
-
-    waiter = $interval(function () {
-      $scope.count += 1;
-
-      seconds.animate($scope.count / $scope.holdDelay, {
-        'duration': 200
-      }, function() {
-        seconds.setText($scope.count);
-      });
-
-      if ($scope.count > $scope.holdDelay) {
-        $scope.waiting = false;
-
-        $scope.total = 0;
-        $scope.count = 0;
-        seconds.set(0);
-        seconds.setText('');
-
-        try {
-          $cordovaVibration.vibrate(100);
-        } catch (e) {
-          // if vibration fails, no biggie
-        }
-
-        $interval.cancel(waiter);
-        $scope.advanceSlide(distance);
-      }
-    }, 1000);
-  };
-
-  $scope.cancelAdvance = function () {
-    $scope.waiting = false;
-    $interval.cancel(waiter);
-  };
+  return slideManager;
+})
+.controller('busymindCtrl', function($rootScope, $scope, $ionicPlatform, slideManager, waiter) {
+  $scope.slideManager = slideManager;
+  $scope.waiter = waiter;
+  waiter.setWait(2);
 
   $ionicPlatform.ready(function() {
     $scope.$apply(function () {

@@ -1,3 +1,4 @@
+/*jshint node:true*/
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var bower = require('bower');
@@ -58,4 +59,27 @@ gulp.task('git-check', function(done) {
 gulp.task('deploy', function () {
   return gulp.src('./www/**/*')
     .pipe(ghPages());
+});
+
+
+
+// ####################
+
+var gettext = require('gulp-angular-gettext');
+
+gulp.task('pot', function () {
+  return gulp.src(['www/index.html', 'www/js/**/*.js'])
+    .pipe(gettext.extract('template.pot', {
+        // options to pass to angular-gettext-tools...
+    }))
+    .pipe(gulp.dest('po/'));
+});
+
+gulp.task('translations', function () {
+  return gulp.src('po/**/*.po')
+    .pipe(gettext.compile({
+      // options to pass to angular-gettext-tools...
+      format: 'json'
+    }))
+    .pipe(gulp.dest('dist/translations/'));
 });

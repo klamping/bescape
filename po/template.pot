@@ -1,0 +1,319 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: index.html:151
+msgid "',"
+msgstr ""
+
+#: index.html:261
+msgid "Almost done. Focus on your breathing one last time."
+msgstr ""
+
+#: index.html:130
+msgid "Anticipate each beat, trying to slow the cadence of your heart."
+msgstr ""
+
+#: index.html:241
+msgid "As humans, we accept both the strength and the weakness as eqaul parts."
+msgstr ""
+
+#: index.html:119
+#: index.html:81
+msgid "As you breath, feel your chest expand and contract. Feel the air move in and out."
+msgstr ""
+
+#: index.html:140
+msgid "Be aware of this tension."
+msgstr ""
+
+#: index.html:60
+msgid "Busymind"
+msgstr ""
+
+#: index.html:231
+msgid "Can you find that happiness again?"
+msgstr ""
+
+#: index.html:210
+msgid "Can you radically accept it?"
+msgstr ""
+
+#: index.html:141
+msgid "Choose a tense spot. Tighten it, then relax fully to relieve the stress."
+msgstr ""
+
+#: index.html:113
+#: index.html:274
+msgid "Conclude Session"
+msgstr ""
+
+#: index.html:242
+msgid "Did your happiness stir any fear or anxiety?"
+msgstr ""
+
+#: index.html:211
+msgid "Don't worry, you don't have to have find an answer right now. Just process."
+msgstr ""
+
+#: index.html:179
+msgid "Draw back inward."
+msgstr ""
+
+#: index.html:221
+msgid "Draw in five deep breaths."
+msgstr ""
+
+#: index.html:129
+msgid "Feel its steady rhythm."
+msgstr ""
+
+#: index.html:101
+msgid "Find the colors and patterns hiding in plain sight."
+msgstr ""
+
+#: index.html:149
+msgid "Find where on your body feels most relaxed right now."
+msgstr ""
+
+#: index.html:150
+msgid "Focus on that area, relaxing as deeply as you can."
+msgstr ""
+
+#: index.html:220
+msgid "Focus on your breathing once more."
+msgstr ""
+
+#: index.html:240
+msgid "Happiness can also bring fear."
+msgstr ""
+
+#: index.html:209
+msgid "Having observed your emotion non-judgementally, can you transform it?"
+msgstr ""
+
+#: index.html:262
+msgid "Hold \"I am Complete\", take one deep breath, let go and return to the world."
+msgstr ""
+
+#: index.html:253
+msgid "Hold \"I'm Accepting Fear\" for 15 seconds and unfold your anxiety."
+msgstr ""
+
+#: index.html:201
+msgid "Hold \"I'm Explaining\" for 15 seconds as you talk it out."
+msgstr ""
+
+#: index.html:232
+msgid "Hold \"I'm Finding Happiness\" for 15 seconds while you consider it."
+msgstr ""
+
+#: index.html:222
+msgid "Hold down \"I'm Breathing\" while breathing in, and release it as you breath out."
+msgstr ""
+
+#: index.html:161
+#: index.html:92
+msgid "Hold down \"I'm Listening\" for 15 seconds while you listen to your world."
+msgstr ""
+
+#: index.html:102
+msgid "Hold down \"I'm Seeing\" as you look around."
+msgstr ""
+
+#: index.html:171
+msgid "Hold down \"I'm Seeing\" for 15 seconds while you look closer."
+msgstr ""
+
+#: index.html:212
+msgid "Hold down \"I'm Thinking\" for 15 seconds while you think."
+msgstr ""
+
+#: index.html:265
+msgid "I am Complete"
+msgstr ""
+
+#: index.html:256
+msgid "I'm Accepting Fear"
+msgstr ""
+
+#: index.html:123
+#: index.html:225
+#: index.html:85
+msgid "I'm Breathing"
+msgstr ""
+
+#: index.html:204
+msgid "I'm Explaining"
+msgstr ""
+
+#: index.html:235
+msgid "I'm Finding Happiness"
+msgstr ""
+
+#: index.html:164
+#: index.html:95
+msgid "I'm Listening"
+msgstr ""
+
+#: index.html:75
+msgid "I'm Relaxing"
+msgstr ""
+
+#: index.html:105
+#: index.html:174
+msgid "I'm Seeing"
+msgstr ""
+
+#: index.html:133
+msgid "I'm Slowing Down"
+msgstr ""
+
+#: index.html:215
+msgid "I'm Thinking"
+msgstr ""
+
+#: index.html:144
+#: index.html:154
+msgid "I'm relaxing"
+msgstr ""
+
+#: index.html:185
+msgid "I'm wandering"
+msgstr ""
+
+#: index.html:181
+msgid "Let your thoughts rise up."
+msgstr ""
+
+#: index.html:100
+#: index.html:169
+msgid "Look around you."
+msgstr ""
+
+#: index.html:61
+msgid "Mindfulness for your busy life"
+msgstr ""
+
+#: index.html:194
+#: index.html:246
+msgid "No"
+msgstr ""
+
+#: index.html:170
+msgid "Notice what colors and patterns are hiding in plain sight."
+msgstr ""
+
+#: index.html:80
+msgid "Now focus on your breath."
+msgstr ""
+
+#: index.html:128
+msgid "Now sense your heart beating in your chest."
+msgstr ""
+
+#: index.html:180
+msgid "Observe your internal dialogue."
+msgstr ""
+
+#: index.html:72
+msgid "Release the tension let your body sink in to relaxation."
+msgstr ""
+
+#: index.html:53
+msgid "Restart"
+msgstr ""
+
+#: index.html:190
+msgid "Return to this moment. Did you notice any fear or anxiety in your thoughts?"
+msgstr ""
+
+#: index.html:230
+msgid "Rewind your day. What has brought you happiness?"
+msgstr ""
+
+#: index.html:138
+msgid "Search your body for tension."
+msgstr ""
+
+#: index.html:151
+msgid "Sink in to the full weight of your relaxation, letting gravity pull down."
+msgstr ""
+
+#: index.html:70
+msgid "Slow down. Search your body for tension."
+msgstr ""
+
+#: index.html:64
+msgid "Start 1-minute Session"
+msgstr ""
+
+#: index.html:65
+msgid "Start 5-minute Session"
+msgstr ""
+
+#: index.html:118
+msgid "Start by focusing on your breath."
+msgstr ""
+
+#: index.html:182
+msgid "Take 15 seconds to let your mind wander."
+msgstr ""
+
+#: index.html:120
+msgid "Take five deep breaths, holding down \"I'm Breathing\" as you breath in, and releasing it as you breath out."
+msgstr ""
+
+#: index.html:82
+msgid "Take four deep breaths, holding down \"I'm Breathing\" as you breath in, and releasing it as you breath out."
+msgstr ""
+
+#: index.html:251
+msgid "Think about those fears and play them out."
+msgstr ""
+
+#: index.html:200
+msgid "Think of how you would objectively describe the emotion to someone."
+msgstr ""
+
+#: index.html:139
+msgid "This could be at your shoulders, back, or even pursed lips."
+msgstr ""
+
+#: index.html:71
+msgid "This could be at your shoulders, your back, or your mouth."
+msgstr ""
+
+#: index.html:270
+msgid "This is you, alive and well."
+msgstr ""
+
+#: index.html:159
+#: index.html:90
+msgid "Turn outward. Open your mind to the sounds around you."
+msgstr ""
+
+#: index.html:160
+#: index.html:91
+msgid "What's the texture of the noise. Is it loud or quiet?"
+msgstr ""
+
+#: index.html:110
+#: index.html:271
+msgid "When ready, return to your day in your own time."
+msgstr ""
+
+#: index.html:252
+msgid "Will they truly prevent you from obtaining your happiness and aspirations?"
+msgstr ""
+
+#: index.html:193
+#: index.html:245
+msgid "Yes"
+msgstr ""
+
+#: index.html:199
+msgid "Your emotions are neither good nor bad, they simply are."
+msgstr ""

@@ -1,0 +1,9 @@
+<div class="progress-indicators">
+<!--   {{waiter.getWaited()}}
+  {{counter.getCount()}}
+  {{counter.getLimit()}} -->
+  <div class="progress count-clock" ng-show="waiter.isWaiting()">
+    <div id="wait-clock"></div>
+  </div>
+  <div id="count-bar" class="progress count-bar" ng-show="counter.getCount() > 0"></div>
+</div>
