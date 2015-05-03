@@ -47,7 +47,7 @@
     <script src="lib/angular-gettext/dist/angular-gettext.min.js"></script>
   </head>
   <body ng-app="busymind" ng-controller="busymindCtrl">
-    <ion-content scroll="false">
+    <ion-content scroll="false" ng-cloak>
       <button class="rate-cta" ng-click="rateApp()" ng-show="canRate && slideManager.get() === 0"><i class="icon ion-android-favorite-outline"></i></button>
       <button class="restart-cta" ng-click="slideManager.reset()" ng-hide="slideManager.get() === 0">
         <i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp;<span translate>Restart</span>
@@ -61,8 +61,8 @@
               <p translate>Mindfulness for your busy life</p>
             </prompt>
             <buttons>
-              <thebutton skin="positive" translate>Start 1-minute Session</thebutton>
-              <thebutton distance="6" translate>Start 5-minute Session</thebutton>
+              <thebutton skin="positive"><span translate>Start 1-minute Session</span></thebutton>
+              <thebutton distance="6"><span translate>Start 5-minute Session</span></thebutton>
             </buttons>
           </slide>
 
@@ -75,7 +75,7 @@
               <p translate>Release the tension let your body sink in to relaxation.</p>
             </prompt>
             <buttons>
-              <thebutton translate>I'm Relaxing</thebutton>
+              <thebutton><span translate>I'm Relaxing</span></thebutton>
             </buttons>
           </slide>
           <slide index="2">
@@ -85,7 +85,7 @@
               <p><strong translate>Take four deep breaths, holding down "I'm Breathing" as you breath in, and releasing it as you breath out.</strong></p>
             </prompt>
             <buttons>
-              <thebutton type="count" limit="4" translate>I'm Breathing</thebutton>
+              <thebutton type="count" limit="4"><span translate>I'm Breathing</span></thebutton>
             </buttons>
           </slide>
           <slide index="3">
@@ -95,7 +95,7 @@
               <p><strong translate>Hold down "I'm Listening" for {{waiter.getWait()}} seconds while you listen to your world.</strong></p>
             </prompt>
             <buttons>
-              <thebutton type="wait" translate>I'm Listening</thebutton>
+              <thebutton type="wait"><span translate>I'm Listening</span></thebutton>
             </buttons>
           </slide>
           <slide index="4">
@@ -105,7 +105,7 @@
               <p translate>Hold down "I'm Seeing" as you look around.</p>
             </prompt>
             <buttons>
-              <thebutton type="wait" translate>I'm Seeing</thebutton>
+              <thebutton type="wait"><span translate>I'm Seeing</span></thebutton>
             </buttons>
           </slide>
           <slide index="5">
@@ -113,7 +113,7 @@
               <p translate>When ready, return to your day in your own time.</p>
             </prompt>
             <buttons>
-              <thebutton type="reset" translate>Conclude Session</thebutton>
+              <thebutton type="reset"><span translate>Conclude Session</span></thebutton>
             </buttons>
           </slide>
 
@@ -126,7 +126,7 @@
               <p><strong translate>Take five deep breaths, holding down "I'm Breathing" as you breath in, and releasing it as you breath out.</strong></p>
             </prompt>
             <buttons>
-              <thebutton type="count" limit="5" translate>I'm Breathing</thebutton>
+              <thebutton type="count" limit="5"><span translate>I'm Breathing</span></thebutton>
             </buttons>
           </slide>
           <slide index="7">
@@ -136,7 +136,7 @@
               <p translate>Anticipate each beat, trying to slow the cadence of your heart.</p>
             </prompt>
             <buttons>
-              <thebutton translate>I'm Slowing Down</thebutton>
+              <thebutton><span translate>I'm Slowing Down</span></thebutton>
             </buttons>
           </slide>
           <slide index="8">
@@ -147,7 +147,7 @@
               <p translate>Choose a tense spot. Tighten it, then relax fully to relieve the stress.</p>
             </prompt>
             <buttons>
-              <thebutton translate>I'm Letting Go</thebutton>
+              <thebutton><span translate>I'm Letting Go</span></thebutton>
             </buttons>
           </slide>
           <slide index="9">
@@ -157,7 +157,7 @@
               <p translate>Sink in to the full weight of your relaxation, letting gravity pull down.</p>
             </prompt>
             <buttons>
-              <thebutton translate>I'm relaxing</thebutton>
+              <thebutton><span translate>I'm relaxing</span></thebutton>
             </buttons>
           </slide>
           <slide index="10">
@@ -167,7 +167,7 @@
               <p><strong translate>Hold down "I'm Listening" for {{waiter.getWait()}} seconds while you listen to your world.</strong></p>
             </prompt>
             <buttons>
-              <thebutton type="wait" translate>I'm Listening</thebutton>
+              <thebutton type="wait"><span translate>I'm Listening</span></thebutton>
             </buttons>
           </slide>
           <slide index="11">
@@ -177,7 +177,7 @@
               <p translate>Hold down "I'm Seeing" for {{waiter.getWait()}} seconds while you look closer.</p>
             </prompt>
             <buttons>
-              <thebutton type="wait" translate>I'm Seeing</thebutton>
+              <thebutton type="wait"><span translate>I'm Seeing</span></thebutton>
             </buttons>
           </slide>
           <slide index="12">
@@ -188,7 +188,7 @@
               <p translate>Take {{waiter.getWait()}} seconds to let your mind wander.</p>
             </prompt>
             <buttons>
-              <thebutton type="wait" translate>I'm wandering</thebutton>
+              <thebutton type="wait"><span translate>I'm wandering</span></thebutton>
             </buttons>
           </slide>
           <slide index="13">
@@ -196,8 +196,8 @@
               <p translate>Return to this moment. Did you notice any fear or anxiety in your thoughts?</p>
             </prompt>
             <buttons>
-              <thebutton skin="positive" translate>Yes</thebutton>
-              <thebutton distance="3" translate>No</thebutton>
+              <thebutton skin="positive"><span translate>Yes</span></thebutton>
+              <thebutton distance="3"><span translate>No</span></thebutton>
             </buttons>
           </slide>
           <slide index="14">
@@ -207,7 +207,7 @@
               <p translate>Hold "I'm Explaining" for {{waiter.getWait()}} seconds as you talk it out.</p>
             </prompt>
             <buttons>
-              <thebutton type="wait" translate>I'm Explaining</thebutton>
+              <thebutton type="wait"><span translate>I'm Explaining</span></thebutton>
             </buttons>
           </slide>
           <slide index="15">
@@ -218,7 +218,7 @@
               <p translate>Hold down "I'm Thinking" for {{waiter.getWait()}} seconds while you think.</p>
             </prompt>
             <buttons>
-              <thebutton type="wait" translate>I'm Thinking</thebutton>
+              <thebutton type="wait"><span translate>I'm Thinking</span></thebutton>
             </buttons>
           </slide>
           <slide index="16">
@@ -228,7 +228,7 @@
               <p translate>Hold down "I'm Breathing" while breathing in, and release it as you breath out.</p>
             </prompt>
             <buttons>
-              <thebutton type="count" limit="5" translate>I'm Breathing</thebutton>
+              <thebutton type="count" limit="5"><span translate>I'm Breathing</span></thebutton>
             </buttons>
           </slide>
           <slide index="17">
@@ -238,7 +238,7 @@
               <p translate>Hold "I'm Finding Happiness" for {{waiter.getWait()}} seconds while you consider it.</p>
             </prompt>
             <buttons>
-              <thebutton type="wait" translate>I'm Finding Happiness</thebutton>
+              <thebutton type="wait"><span translate>I'm Finding Happiness</span></thebutton>
             </buttons>
           </slide>
           <slide index="18">
@@ -248,8 +248,8 @@
               <p translate>Did your happiness stir any fear or anxiety?</p>
             </prompt>
             <buttons>
-              <thebutton skin="positive" translate>Yes</thebutton>
-              <thebutton distance="2" translate>No</thebutton>
+              <thebutton skin="positive"><span translate>Yes</span></thebutton>
+              <thebutton distance="2"><span translate>No</span></thebutton>
             </buttons>
           </slide>
           <slide index="19">
@@ -259,7 +259,7 @@
               <p translate>Hold "I'm Accepting Fear" for {{waiter.getWait()}} seconds and unfold your anxiety.</p>
             </prompt>
             <buttons>
-              <thebutton type="wait" translate>I'm Accepting Fear</thebutton>
+              <thebutton type="wait"><span translate>I'm Accepting Fear</span></thebutton>
             </buttons>
           </slide>
           <slide index="20">
@@ -268,7 +268,7 @@
               <p translate>Hold "I am Complete", take one deep breath, let go and return to the world.</p>
             </prompt>
             <buttons>
-              <thebutton classes="breath" translate>I am Complete</thebutton>
+              <thebutton classes="breath"><span translate>I am Complete</span></thebutton>
             </buttons>
           </slide>
           <slide index="21">
@@ -277,7 +277,7 @@
               <p translate>When ready, return to your day in your own time.</p>
             </prompt>
             <buttons>
-              <thebutton type="reset" translate>Conclude Session</thebutton>
+              <thebutton type="reset"><span translate>Conclude Session</span></thebutton>
             </buttons>
           </slide>
 
@@ -287,7 +287,7 @@
 
             </prompt>
             <buttons>
-              <thebutton type="wait" translate></thebutton>
+              <thebutton type="wait"><span translate></span></thebutton>
             </buttons>
           </slide>
           -->
