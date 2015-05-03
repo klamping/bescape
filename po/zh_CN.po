@@ -1,16 +1,17 @@
 msgid ""
 msgstr ""
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: BusyMind\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
+"PO-Revision-Date: 2015-05-03 18:01-0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: zh_CN\n"
 "MIME-Version: 1.0\n"
-"Language: en\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: index.html:267
 msgid "Almost done. Focus on your breathing one last time."
@@ -25,8 +26,10 @@ msgid "As humans, we accept both the strength and the weakness as eqaul parts."
 msgstr ""
 
 #: index.html:125 index.html:84
-msgid "As you breath, feel your chest expand and contract. Feel the air move in and out."
-msgstr ""
+msgid ""
+"As you breath, feel your chest expand and contract. Feel the air move in and "
+"out."
+msgstr "当您呼吸时，请感受您胸口收缩膨胀，感受空气在您呼吐间的流动。"
 
 #: index.html:146
 msgid "Be aware of this tension."
@@ -34,7 +37,7 @@ msgstr ""
 
 #: index.html:60
 msgid "Busymind"
-msgstr ""
+msgstr "忙碌心灵"
 
 #: index.html:237
 msgid "Can you find that happiness again?"
@@ -45,8 +48,10 @@ msgid "Can you radically accept it?"
 msgstr ""
 
 #: index.html:147
-msgid "Choose a tense spot. Tighten it, then relax fully to relieve the stress."
+msgid ""
+"Choose a tense spot. Tighten it, then relax fully to relieve the stress."
 msgstr ""
+"Choose a tense spot. Tighten it, then relax fully to relieve the stress."
 
 #: index.html:116 index.html:280
 msgid "Conclude Session"
@@ -57,7 +62,8 @@ msgid "Did your happiness stir any fear or anxiety?"
 msgstr ""
 
 #: index.html:217
-msgid "Don't worry, you don't have to have find an answer right now. Just process."
+msgid ""
+"Don't worry, you don't have to have find an answer right now. Just process."
 msgstr ""
 
 #: index.html:185
@@ -74,15 +80,15 @@ msgstr ""
 
 #: index.html:104
 msgid "Find the colors and patterns hiding in plain sight."
-msgstr ""
+msgstr "寻找隐藏在您周围的颜色与规律。"
 
 #: index.html:155
 msgid "Find where on your body feels most relaxed right now."
-msgstr ""
+msgstr "在您身体里寻找最放松的部位。"
 
 #: index.html:156
 msgid "Focus on that area, relaxing as deeply as you can."
-msgstr ""
+msgstr "专注它，尽量让它更松弛。"
 
 #: index.html:226
 msgid "Focus on your breathing once more."
@@ -97,40 +103,53 @@ msgid "Having observed your emotion non-judgementally, can you transform it?"
 msgstr ""
 
 #: index.html:268
-msgid "Hold \"I am Complete\", take one deep breath, let go and return to the world."
+msgid ""
+"Hold \"I am Complete\", take one deep breath, let go and return to the world."
 msgstr ""
 
 #: index.html:259
-msgid "Hold \"I'm Accepting Fear\" for {{waiter.getWait()}} seconds and unfold your anxiety."
-msgstr ""
+msgid ""
+"Hold \"I'm Accepting Fear\" for {{waiter.getWait()}} seconds and unfold your "
+"anxiety."
+msgstr "请连续按着按钮{{waiter.getWait()}}秒。"
 
 #: index.html:207
-msgid "Hold \"I'm Explaining\" for {{waiter.getWait()}} seconds as you talk it out."
-msgstr ""
+msgid ""
+"Hold \"I'm Explaining\" for {{waiter.getWait()}} seconds as you talk it out."
+msgstr "请连续按着按钮{{waiter.getWait()}}秒。"
 
 #: index.html:238
-msgid "Hold \"I'm Finding Happiness\" for {{waiter.getWait()}} seconds while you consider it."
-msgstr ""
+msgid ""
+"Hold \"I'm Finding Happiness\" for {{waiter.getWait()}} seconds while you "
+"consider it."
+msgstr "请连续按着按钮{{waiter.getWait()}}秒。"
 
 #: index.html:228
-msgid "Hold down \"I'm Breathing\" while breathing in, and release it as you breath out."
+msgid ""
+"Hold down \"I'm Breathing\" while breathing in, and release it as you breath "
+"out."
 msgstr ""
 
 #: index.html:167 index.html:95
-msgid "Hold down \"I'm Listening\" for {{waiter.getWait()}} seconds while you listen to your world."
-msgstr ""
+msgid ""
+"Hold down \"I'm Listening\" for {{waiter.getWait()}} seconds while you "
+"listen to your world."
+msgstr "请连续按着按钮{{waiter.getWait()}}秒。"
 
 #: index.html:105
 msgid "Hold down \"I'm Seeing\" as you look around."
-msgstr ""
+msgstr "请边意识您周围边按着按钮。"
 
 #: index.html:177
-msgid "Hold down \"I'm Seeing\" for {{waiter.getWait()}} seconds while you look closer."
-msgstr ""
+msgid ""
+"Hold down \"I'm Seeing\" for {{waiter.getWait()}} seconds while you look "
+"closer."
+msgstr "请连续按着按钮{{waiter.getWait()}}秒。"
 
 #: index.html:218
-msgid "Hold down \"I'm Thinking\" for {{waiter.getWait()}} seconds while you think."
-msgstr ""
+msgid ""
+"Hold down \"I'm Thinking\" for {{waiter.getWait()}} seconds while you think."
+msgstr "请连续按着按钮{{waiter.getWait()}}秒。"
 
 #: index.html:271
 msgid "I am Complete"
@@ -190,11 +209,11 @@ msgstr ""
 
 #: index.html:103 index.html:175
 msgid "Look around you."
-msgstr ""
+msgstr "关注您的周围。"
 
 #: index.html:61
 msgid "Mindfulness for your busy life"
-msgstr ""
+msgstr "您忙碌生活之正念"
 
 #: index.html:200 index.html:252
 msgid "No"
@@ -206,7 +225,7 @@ msgstr ""
 
 #: index.html:83
 msgid "Now focus on your breath."
-msgstr ""
+msgstr "现在请注意您的气息。"
 
 #: index.html:134
 msgid "Now sense your heart beating in your chest."
@@ -218,14 +237,15 @@ msgstr ""
 
 #: index.html:75
 msgid "Release the tension let your body sink in to relaxation."
-msgstr ""
+msgstr "请用自我意识让您的肌肉放松，下垂。"
 
 #: index.html:53
 msgid "Restart"
 msgstr ""
 
 #: index.html:196
-msgid "Return to this moment. Did you notice any fear or anxiety in your thoughts?"
+msgid ""
+"Return to this moment. Did you notice any fear or anxiety in your thoughts?"
 msgstr ""
 
 #: index.html:236
@@ -234,15 +254,16 @@ msgstr ""
 
 #: index.html:144
 msgid "Search your body for tension."
-msgstr ""
+msgstr "寻找您紧张疲劳的肌肉。"
 
 #: index.html:157
-msgid "Sink in to the full weight of your relaxation, letting gravity pull down."
-msgstr ""
+msgid ""
+"Sink in to the full weight of your relaxation, letting gravity pull down."
+msgstr "让地吸引力负担您全身的重力。"
 
 #: index.html:73
 msgid "Slow down. Search your body for tension."
-msgstr ""
+msgstr "缓一下。寻找您紧张疲劳的肌肉。"
 
 #: index.html:64
 msgid "Start 1-minute Session"
@@ -254,15 +275,19 @@ msgstr ""
 
 #: index.html:124
 msgid "Start by focusing on your breath."
-msgstr ""
+msgstr "请注意您的气息。"
 
 #: index.html:126
-msgid "Take five deep breaths, holding down \"I'm Breathing\" as you breath in, and releasing it as you breath out."
-msgstr ""
+msgid ""
+"Take five deep breaths, holding down \"I'm Breathing\" as you breath in, and "
+"releasing it as you breath out."
+msgstr "请重复深呼吸五次，每次吸气时请按着按钮，呼气时松开按钮。"
 
 #: index.html:85
-msgid "Take four deep breaths, holding down \"I'm Breathing\" as you breath in, and releasing it as you breath out."
-msgstr ""
+msgid ""
+"Take four deep breaths, holding down \"I'm Breathing\" as you breath in, and "
+"releasing it as you breath out."
+msgstr "请重复深呼吸四次，每次吸气时请按着按钮，呼气时松开按钮。"
 
 #: index.html:188
 msgid "Take {{waiter.getWait()}} seconds to let your mind wander."
@@ -282,7 +307,7 @@ msgstr ""
 
 #: index.html:74
 msgid "This could be at your shoulders, your back, or your mouth."
-msgstr ""
+msgstr "它们可能在您肩膀，后背，或者嘴部。"
 
 #: index.html:276
 msgid "This is you, alive and well."
@@ -290,18 +315,19 @@ msgstr ""
 
 #: index.html:165 index.html:93
 msgid "Turn outward. Open your mind to the sounds around you."
-msgstr ""
+msgstr "现在请注意您周围的声音。"
 
 #: index.html:166 index.html:94
 msgid "What's the texture of the noise. Is it loud or quiet?"
-msgstr ""
+msgstr "它是大声或小声？尖锐或柔和？"
 
 #: index.html:113 index.html:277
 msgid "When ready, return to your day in your own time."
-msgstr ""
+msgstr "当您准备好时，请回到现实世界。"
 
 #: index.html:258
-msgid "Will they truly prevent you from obtaining your happiness and aspirations?"
+msgid ""
+"Will they truly prevent you from obtaining your happiness and aspirations?"
 msgstr ""
 
 #: index.html:199 index.html:251

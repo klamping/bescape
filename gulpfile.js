@@ -78,8 +78,7 @@ gulp.task('pot', function () {
 gulp.task('translations', function () {
   return gulp.src('po/**/*.po')
     .pipe(gettext.compile({
-      // options to pass to angular-gettext-tools...
       format: 'json'
     }))
-    .pipe(gulp.dest('dist/translations/'));
+    .pipe(gulp.dest('www/translations/'));
 });

@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(../img/straws.png);
   background-image: url(../img/subtle_white_feathers.png); }
   .wrapper .progress-indicators {
-    height: 120px;
+    height: 100px;
     position: relative;
     margin: 0 1em; }
   .wrapper .slides {
@@ -158,26 +158,32 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2; }
 
 .prompt {
-  -webkit-flex: 1 0 auto;
-  -ms-flex: 1 0 auto;
-  flex: 1 0 auto;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-flow: column;
-  -ms-flex-flow: column;
-  flex-flow: column;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   max-width: 30em;
   width: 100%;
-  padding: 1em; }
+  padding: 0 0.5em;
+  -webkit-flex-flow: column;
+  -ms-flex-flow: column;
+  flex-flow: column; }
   .prompt .prompt-inner {
     background: rgba(255, 255, 255, 0.75);
     -webkit-transform: rotate(-0.2deg);
     transform: rotate(-0.2deg);
-    padding: 0.5em 0.8em; }
+    padding: 0.25em 0.4em;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    flex-flow: column; }
   .prompt p {
     -webkit-transform: rotate(0.2deg);
     transform: rotate(0.2deg); }
@@ -204,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
   .buttons .button.button-clear {
     margin-bottom: 10px;
     padding: 0; }
-    .buttons .button.button-clear span {
+    .buttons .button.button-clear > span {
       display: block;
       background: #fff;
       padding-right: 1.5em;
@@ -218,7 +224,7 @@ h1, h2, h3, h4, h5, h6 {
       -webkit-transform-style: preserve-3D;
       transform-style: preserve-3D;
       box-shadow: -3px -1px 3px rgba(0, 0, 0, 0.1); }
-    .buttons .button.button-clear.activated span {
+    .buttons .button.button-clear.activated > span {
       -webkit-transform: skewY(-1deg) translateX(2px);
       transform: skewY(-1deg) translateX(2px);
       box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
