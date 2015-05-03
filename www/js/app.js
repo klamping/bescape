@@ -13,7 +13,7 @@ angular.module('busymind', ['ionic', 'ngCordova', 'gettext'])
 
     if(typeof navigator.globalization !== 'undefined') {
       $cordovaGlobalization.getPreferredLanguage().then(function(language) {
-        gettextCatalog.setCurrentLanguage((language.value).split('-')[0]);
+        // gettextCatalog.setCurrentLanguage(language.value);
       });
     }
   });

@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .restart-cta {
   position: absolute;
-  top: 20px;
+  top: 30px;
   padding: 5px 10px;
   background: $clearWhite;
   border: 0;
@@ -51,12 +51,19 @@ h1, h2, h3, h4, h5, h6 {
 
 .rate-cta {
   position: absolute;
-  top: 20px;
-  right: 5px;
-  background: transparent;
+  top: 30px;
+  right: 0;
+  padding: 5px 10px;
+  background: $clearWhite;
   border: 0;
   z-index: 10;
   color: #E36E4F;
+  transform: rotate(-.5deg);
+  transition: 500ms ease-out transform;
+
+  &.ng-hide {
+    transform: rotate(-.5deg) translateX(100%);
+  }
 }
 
 .wrapper {
@@ -74,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url(../img/subtle_white_feathers.png);
 
   .progress-indicators {
-    height: 150px;
+    height: 120px;
     position: relative;
     margin: 0 1em;
   }
@@ -100,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   transform: translateX(-50%);
   transition: 500ms ease-in-out opacity;
-  bottom: 10px;
+  bottom: 0;
 
   &.count-bar svg {
     width: 100%;
@@ -158,7 +165,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-25%);
 }
 .slide.ng-hide-add .buttons .button {
-  // transform: translateX(100%);
+  transform: translateX(100%);
 }
 
 
@@ -218,13 +225,13 @@ h1, h2, h3, h4, h5, h6 {
       position: relative;
       transform-origin: top right;
       transform-style: preserve-3D;
-      box-shadow: -4px 0 3px rgba(0,0,0,0.1);
+      box-shadow: -3px -1px 3px rgba(0,0,0,0.1);
     }
 
     &.activated {
       span {
         transform: skewY(-1deg) translateX(2px);
-        box-shadow: -1px 0 2px rgba(0,0,0,0.1);
+        box-shadow: 0 0 2px rgba(0,0,0,0.1);
       }
     }
   }
