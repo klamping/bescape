@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="{{waiter.getWait()}}2x{{waiter.getWait()}}2" href="apple-touch-icon-{{waiter.getWait()}}2x{{waiter.getWait()}}2.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
@@ -39,29 +39,259 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="components/progress/progress.js"></script>
+    <script src="components/slide/slide.js"></script>
+    <script src="components/prompt/prompt.js"></script>
+    <script src="components/thebutton/thebutton.js"></script>
+    <script src="components/buttons/buttons.js"></script>
+    <script src="lib/angular-gettext/dist/angular-gettext.min.js"></script>
   </head>
   <body ng-app="busymind" ng-controller="busymindCtrl">
-    <ion-content overflow-scroll="false" scrollbar-y="false">
-      <button class="rate-cta" ng-click="rateApp()" ng-show="canRate && activeSlide === 0"><i class="icon ion-android-favorite-outline"></i></button>
-      <button class="restart-cta" ng-click="restartSlides()" ng-hide="activeSlide === 0">
-        <i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp;Restart</button>
+    <ion-content scroll="false">
+      <button class="rate-cta" ng-click="rateApp()" ng-show="canRate && slideManager.get() === 0"><i class="icon ion-android-favorite-outline"></i></button>
+      <button class="restart-cta" ng-click="slideManager.reset()" ng-hide="slideManager.get() === 0">
+        <i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp;<span translate>Restart</span>
+      </button>
       <div class="wrapper">
-        <div class="progress-indicators">
-          <div class="progress count-clock" ng-show="waiting">
-            <div id="wait-clock"></div>
-          </div>
-          <div id="count-bar" class="progress count-bar" ng-show="countTotal > 0"></div>
-        </div>
+        <progress-indicators></progress-indicators>
         <div class="slides">
-          <div class="slide" ng-repeat="slide in slides" ng-show="$index === activeSlide">
-            <div class="content">
-              <div ng-bind-html="slide.prompt" class="prompt"></div>
-              <div class="buttons">
-                <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" ng-click="{{button.action}}" ng-if="button.action" ng-bind="button.text"></button>
-                <button ng-repeat="button in slide.buttons" class="button button-{{button.type}} button-clear button-large" on-touch="{{button.hold}}" on-release="{{button.release}}" ng-if="button.hold" ng-bind="button.text"></button>
-              </div>
-            </div>
-          </div>
+          <slide index="0">
+            <prompt>
+              <h1 class="app-name" translate>Busymind</h1>
+              <p translate>Mindfulness for your busy life</p>
+            </prompt>
+            <buttons>
+              <thebutton skin="positive" translate>Start 1-minute Session</thebutton>
+              <thebutton distance="6" translate>Start 5-minute Session</thebutton>
+            </buttons>
+          </slide>
+
+
+          <!-- 1 Minute Session -->
+          <slide index="1">
+            <prompt>
+              <p translate>Slow down. Search your body for tension.</p>
+              <p translate>This could be at your shoulders, your back, or your mouth.</p>
+              <p translate>Release the tension let your body sink in to relaxation.</p>
+            </prompt>
+            <buttons>
+              <thebutton translate>I'm Relaxing</thebutton>
+            </buttons>
+          </slide>
+          <slide index="2">
+            <prompt>
+              <p translate>Now focus on your breath.</p>
+              <p translate>As you breath, feel your chest expand and contract. Feel the air move in and out.</p>
+              <p><strong translate>Take four deep breaths, holding down "I'm Breathing" as you breath in, and releasing it as you breath out.</strong></p>
+            </prompt>
+            <buttons>
+              <thebutton type="count" limit="4000" translate>I'm Breathing</thebutton>
+            </buttons>
+          </slide>
+          <slide index="3">
+            <prompt>
+              <p translate>Turn outward. Open your mind to the sounds around you.</p>
+              <p translate>What's the texture of the noise. Is it loud or quiet?</p>
+              <p><strong translate>Hold down "I'm Listening" for {{waiter.getWait()}} seconds while you listen to your world.</strong></p>
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate>I'm Listening</thebutton>
+            </buttons>
+          </slide>
+          <slide index="4">
+            <prompt>
+              <p translate>Look around you.</p>
+              <p translate>Find the colors and patterns hiding in plain sight.</p>
+              <p translate>Hold down "I'm Seeing" as you look around.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate>I'm Seeing</thebutton>
+            </buttons>
+          </slide>
+          <slide index="5">
+            <prompt>
+              <p translate>When ready, return to your day in your own time.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="reset" translate>Conclude Session</thebutton>
+            </buttons>
+          </slide>
+
+
+          <!-- 5 Minute Session -->
+          <slide index="6">
+            <prompt>
+              <p translate>Start by focusing on your breath.</p>
+              <p translate>As you breath, feel your chest expand and contract. Feel the air move in and out.</p>
+              <p><strong translate>Take five deep breaths, holding down "I'm Breathing" as you breath in, and releasing it as you breath out.</strong></p>
+            </prompt>
+            <buttons>
+              <thebutton type="count" limit="5" translate>I'm Breathing</thebutton>
+            </buttons>
+          </slide>
+          <slide index="7">
+            <prompt>
+              <p translate>Now sense your heart beating in your chest.</p>
+              <p translate>Feel its steady rhythm.</p>
+              <p translate>Anticipate each beat, trying to slow the cadence of your heart.</p>
+            </prompt>
+            <buttons>
+              <thebutton translate>I'm Slowing Down</thebutton>
+            </buttons>
+          </slide>
+          <slide index="8">
+            <prompt>
+              <p translate>Search your body for tension.</p>
+              <p translate>This could be at your shoulders, back, or even pursed lips.</p>
+              <p translate>Be aware of this tension.</p>
+              <p translate>Choose a tense spot. Tighten it, then relax fully to relieve the stress.</p>
+            </prompt>
+            <buttons>
+              <thebutton translate>I'm Letting Go</thebutton>
+            </buttons>
+          </slide>
+          <slide index="9">
+            <prompt>
+              <p translate>Find where on your body feels most relaxed right now.</p>
+              <p translate>Focus on that area, relaxing as deeply as you can.</p>
+              <p translate>Sink in to the full weight of your relaxation, letting gravity pull down.</p>
+            </prompt>
+            <buttons>
+              <thebutton translate>I'm relaxing</thebutton>
+            </buttons>
+          </slide>
+          <slide index="10">
+            <prompt>
+              <p translate>Turn outward. Open your mind to the sounds around you.</p>
+              <p translate>What's the texture of the noise. Is it loud or quiet?</p>
+              <p><strong translate>Hold down "I'm Listening" for {{waiter.getWait()}} seconds while you listen to your world.</strong></p>
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate>I'm Listening</thebutton>
+            </buttons>
+          </slide>
+          <slide index="11">
+            <prompt>
+              <p translate>Look around you.</p>
+              <p translate>Notice what colors and patterns are hiding in plain sight.</p>
+              <p translate>Hold down "I'm Seeing" for {{waiter.getWait()}} seconds while you look closer.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate>I'm Seeing</thebutton>
+            </buttons>
+          </slide>
+          <slide index="12">
+            <prompt>
+              <p translate>Draw back inward.</p>
+              <p translate>Observe your internal dialogue.</p>
+              <p translate>Let your thoughts rise up.</p>
+              <p translate>Take {{waiter.getWait()}} seconds to let your mind wander.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate>I'm wandering</thebutton>
+            </buttons>
+          </slide>
+          <slide index="13">
+            <prompt>
+              <p translate>Return to this moment. Did you notice any fear or anxiety in your thoughts?</p>
+            </prompt>
+            <buttons>
+              <thebutton skin="positive" translate>Yes</thebutton>
+              <thebutton distance="3" translate>No</thebutton>
+            </buttons>
+          </slide>
+          <slide index="14">
+            <prompt>
+              <p translate>Your emotions are neither good nor bad, they simply are.</p>
+              <p translate>Think of how you would objectively describe the emotion to someone.</p>
+              <p translate>Hold "I'm Explaining" for {{waiter.getWait()}} seconds as you talk it out.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate>I'm Explaining</thebutton>
+            </buttons>
+          </slide>
+          <slide index="15">
+            <prompt>
+              <p translate>Having observed your emotion non-judgementally, can you transform it?</p>
+              <p translate>Can you radically accept it?</p>
+              <p translate>Don't worry, you don't have to have find an answer right now. Just process.</p>
+              <p translate>Hold down "I'm Thinking" for {{waiter.getWait()}} seconds while you think.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate>I'm Thinking</thebutton>
+            </buttons>
+          </slide>
+          <slide index="16">
+            <prompt>
+              <p translate>Focus on your breathing once more.</p>
+              <p translate>Draw in five deep breaths.</p>
+              <p translate>Hold down "I'm Breathing" while breathing in, and release it as you breath out.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="count" limit="5" translate>I'm Breathing</thebutton>
+            </buttons>
+          </slide>
+          <slide index="17">
+            <prompt>
+              <p translate>Rewind your day. What has brought you happiness?</p>
+              <p translate>Can you find that happiness again?</p>
+              <p translate>Hold "I'm Finding Happiness" for {{waiter.getWait()}} seconds while you consider it.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate>I'm Finding Happiness</thebutton>
+            </buttons>
+          </slide>
+          <slide index="18">
+            <prompt>
+              <p translate>Happiness can also bring fear.</p>
+              <p translate>As humans, we accept both the strength and the weakness as eqaul parts.</p>
+              <p translate>Did your happiness stir any fear or anxiety?</p>
+            </prompt>
+            <buttons>
+              <thebutton skin="positive" translate>Yes</thebutton>
+              <thebutton distance="2" translate>No</thebutton>
+            </buttons>
+          </slide>
+          <slide index="19">
+            <prompt>
+              <p translate>Think about those fears and play them out.</p>
+              <p translate>Will they truly prevent you from obtaining your happiness and aspirations?</p>
+              <p translate>Hold "I'm Accepting Fear" for {{waiter.getWait()}} seconds and unfold your anxiety.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate>I'm Accepting Fear</thebutton>
+            </buttons>
+          </slide>
+          <slide index="20">
+            <prompt>
+              <p translate>Almost done. Focus on your breathing one last time.</p>
+              <p translate>Hold "I am Complete", take one deep breath, let go and return to the world.</p>
+            </prompt>
+            <buttons>
+              <thebutton classes="breath" translate>I am Complete</thebutton>
+            </buttons>
+          </slide>
+          <slide index="21">
+            <prompt>
+              <p translate>This is you, alive and well.</p>
+              <p translate>When ready, return to your day in your own time.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="reset" translate>Conclude Session</thebutton>
+            </buttons>
+          </slide>
+
+          <!--
+          <slide index="">
+            <prompt>
+
+            </prompt>
+            <buttons>
+              <thebutton type="wait" translate></thebutton>
+            </buttons>
+          </slide>
+          -->
+
         </div>
       </div>
     </ion-content>
