@@ -13,8 +13,9 @@ angular.module('busymind', ['ionic', 'ngCordova', 'gettext'])
 
     if(typeof navigator.globalization !== 'undefined') {
       $cordovaGlobalization.getPreferredLanguage().then(function(language) {
-        gettextCatalog.setCurrentLanguage(language.value);
-        gettextCatalog.loadRemote('/translations/' + language.value + '.json');
+        var main = language.value.split('-')[0];
+        gettextCatalog.setCurrentLanguage(main);
+        gettextCatalog.loadRemote('translations/' + main + '.json');
       });
     }
   });

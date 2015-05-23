@@ -1,0 +1,41 @@
+.global-button {
+  position: absolute;
+  padding: 5px 10px;
+  background: $clearWhite;
+  border: 0;
+  color: #225378;
+  font-size: 22px;
+  transform: rotate(-.5deg);
+  transition: 500ms ease-out transform;
+  z-index: 10;
+
+  &.ng-hide {
+    transform: rotate(-.5deg) translateX(-100%);
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+}
+.restart-cta {
+  top: 30px;
+  z-index: 10;
+}
+
+.rate-cta {
+  top: 30px;
+  right: 0;
+
+  &.ng-hide {
+    transform: rotate(-.5deg) translateX(100%);
+  }
+}
+
+.settings {
+  bottom: 5%;
+  color: #4F483D;
+
+  .icon {
+    font-size: 26px;
+  }
+}

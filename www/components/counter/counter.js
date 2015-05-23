@@ -25,21 +25,21 @@ angular.module('busymind')
   this.increment = function () {
     _count++;
     $rootScope.$digest();
-    $rootScope.$broadcast('countAdvance');
 
     if (_count >= _limit) {
       $rootScope.$broadcast('countLimitReached');
       this.reset();
+    } else if (_count < _limit) {
+      $rootScope.$broadcast('countAdvance');
     }
   };
 })
 .directive('counter', function ($rootScope, Counter) {
   return {
     restrict: 'E',
-    templateUrl: '/components/counter/counter.html',
+    templateUrl: 'components/counter/counter.html',
     replace: true,
     link: function (scope, element, attrs) {
-      console.log(scope.parent);
       var counter = new Counter();
       counter.setLimit(attrs.limit);
 

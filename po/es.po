@@ -1,0 +1,309 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: BusyMind\n"
+"Language: es\n"
+
+#: index.html:267
+msgid "Almost done. Focus on your breathing one last time."
+msgstr "Casi terminamos. Concentrese en su respiro por la ultima vez."
+
+#: index.html:136
+msgid "Anticipate each beat, trying to slow the cadence of your heart."
+msgstr "Anticipe cada latido, y trate de reducir la cadencia de su corazón."
+
+#: index.html:247
+msgid "As humans, we accept both the strength and the weakness as eqaul parts."
+msgstr "Como seres humanos, debemos aceptar advantajas y desventajas como partes del mismo."
+
+#: index.html:125 index.html:84
+msgid "As you breath, feel your chest expand and contract. Feel the air move in and out."
+msgstr "Siente su pecho expandir, contraer y también el movimiento del aire por cada respiro. "
+
+#: index.html:146
+msgid "Be aware of this tension."
+msgstr "Esté conciente de esta tención."
+
+#: index.html:60
+msgid "Busymind"
+msgstr "MenteOcupada"
+
+#: index.html:237
+msgid "Can you find that happiness again?"
+msgstr "¿Podría ser posible encontrar esa alegría de nuevo?"
+
+#: index.html:216
+msgid "Can you radically accept it?"
+msgstr "Puede aceptarlos radicalmente?"
+
+#: index.html:147
+msgid "Choose a tense spot. Tighten it, then relax fully to relieve the stress."
+msgstr "Elige un punto de tención. Tense vigorosamente el músculo por unos segundos y relájelo completamente para aliviar el estrés."
+
+#: index.html:116 index.html:280
+msgid "Conclude Session"
+msgstr "Concluir Sesión"
+
+#: index.html:248
+msgid "Did your happiness stir any fear or anxiety?"
+msgstr "¿Alzó su felicidad algún temor o ansiedad?"
+
+#: index.html:217
+msgid "Don't worry, you don't have to have find an answer right now. Just process."
+msgstr "No se procupe, no necesita encontrar una respuesta en este momento. No más tiene que procesar."
+
+#: index.html:185
+msgid "Draw back inward."
+msgstr "Concéntrese en si mismo de nuevo."
+
+#: index.html:227
+msgid "Draw in five deep breaths."
+msgstr "Tome cinco respiros profundos."
+
+#: index.html:135
+msgid "Feel its steady rhythm."
+msgstr "Percibe el firme ritmo."
+
+#: index.html:104
+msgid "Find the colors and patterns hiding in plain sight."
+msgstr "Encuentre colores y patrones escondidos en plena vista."
+
+#: index.html:155
+msgid "Find where on your body feels most relaxed right now."
+msgstr "Busque en su cuerpo la parte más relajada en este momento."
+
+#: index.html:156
+msgid "Focus on that area, relaxing as deeply as you can."
+msgstr "Concéntrese en esta area, relajandola lo más que pueda."
+
+#: index.html:226
+msgid "Focus on your breathing once more."
+msgstr "Concéntrese en su respiro una vez más."
+
+#: index.html:246
+msgid "Happiness can also bring fear."
+msgstr "La felicidad también puede traer temor."
+
+#: index.html:215
+msgid "Having observed your emotion non-judgementally, can you transform it?"
+msgstr "Despues de observar sus emociones, podría transformarlos?"
+
+#: index.html:268
+msgid "Hold \"I am Complete\", take one deep breath, let go and return to the world."
+msgstr "Oprima el botón y tome un respiro profundo, suelte el botón y vuelva al mundo alrededor suyo."
+
+#: index.html:259
+msgid "Hold \"I'm Accepting Fear\" for {{waiter.getWait()}} seconds and unfold your anxiety."
+msgstr "Oprima el botón por {{waiter.getWait()}} segundos mientras desarrolla estos temores."
+
+#: index.html:207
+msgid "Hold \"I'm Explaining\" for {{waiter.getWait()}} seconds as you talk it out."
+msgstr "Oprima por {{waiter.getWait()}} segundos mientras simulas la conversación."
+
+#: index.html:238
+msgid "Hold \"I'm Finding Happiness\" for {{waiter.getWait()}} seconds while you consider it."
+msgstr "Oprima el botón por {{waiter.getWait()}} segundos mientras lo considera."
+
+#: index.html:228
+msgid "Hold down \"I'm Breathing\" while breathing in, and release it as you breath out."
+msgstr "Respire profundamente cuatro veces. Oprima el botón mientras inhále, y suéltelo cuando exhále."
+
+#: index.html:167 index.html:95
+msgid "Hold down \"I'm Listening\" for {{waiter.getWait()}} seconds while you listen to your world."
+msgstr "Oprima el botón por {{waiter.getWait()}} segundos mientras escucha a su alrededor."
+
+#: index.html:105
+msgid "Hold down \"I'm Seeing\" as you look around."
+msgstr "Oprima el botón mientras examina alrededor suyo."
+
+#: index.html:177
+msgid "Hold down \"I'm Seeing\" for {{waiter.getWait()}} seconds while you look closer."
+msgstr "Oprima el botón mientras mira alrededor suyo."
+
+#: index.html:218
+msgid "Hold down \"I'm Thinking\" for {{waiter.getWait()}} seconds while you think."
+msgstr "Oprima el botón por {{waiter.getWait()}} segundos mientras piensa."
+
+#: index.html:271
+msgid "I am Complete"
+msgstr "Soy completa"
+
+#: index.html:262
+msgid "I'm Accepting Fear"
+msgstr "Estoy Aceptando Miedo"
+
+#: index.html:129 index.html:231 index.html:88
+msgid "I'm Breathing"
+msgstr "Estoy de respiración"
+
+#: index.html:210
+msgid "I'm Explaining"
+msgstr "Estoy Explicando"
+
+#: index.html:241
+msgid "I'm Finding Happiness"
+msgstr "Estoy Encontrar la felicidad"
+
+#: index.html:150
+msgid "I'm Letting Go"
+msgstr "Me estoy dejando ir"
+
+#: index.html:170 index.html:98
+msgid "I'm Listening"
+msgstr "Estoy escuchando"
+
+#: index.html:78
+msgid "I'm Relaxing"
+msgstr "Me estoy relajando"
+
+#: index.html:108 index.html:180
+msgid "I'm Seeing"
+msgstr "Estoy viendo"
+
+#: index.html:139
+msgid "I'm Slowing Down"
+msgstr "Estoy ralentizando"
+
+#: index.html:221
+msgid "I'm Thinking"
+msgstr "Estoy pensando"
+
+#: index.html:160
+msgid "I'm relaxing"
+msgstr "Me estoy relajando"
+
+#: index.html:191
+msgid "I'm wandering"
+msgstr "Estoy vagando"
+
+#: index.html:187
+msgid "Let your thoughts rise up."
+msgstr "Deje que sus pensamientos se exposen."
+
+#: index.html:103 index.html:175
+msgid "Look around you."
+msgstr "Mire alrededor suyo."
+
+#: index.html:61
+msgid "Mindfulness for your busy life"
+msgstr "Conciencia para su ocupada vida"
+
+#: index.html:200 index.html:252
+msgid "No"
+msgstr "No"
+
+#: index.html:176
+msgid "Notice what colors and patterns are hiding in plain sight."
+msgstr "Encuentre colores y patrones escondidos en plena vista."
+
+#: index.html:83
+msgid "Now focus on your breath."
+msgstr "Ahora concentrese en su respiración."
+
+#: index.html:134
+msgid "Now sense your heart beating in your chest."
+msgstr "Ahora siente su corazón latir en su pecho."
+
+#: index.html:186
+msgid "Observe your internal dialogue."
+msgstr "Observe su diálogo internal."
+
+#: index.html:75
+msgid "Release the tension let your body sink in to relaxation."
+msgstr "Libere la tención acumulada y deje que su cuerpo se relaje completamente."
+
+#: index.html:53
+msgid "Restart"
+msgstr "Reanudar"
+
+#: index.html:196
+msgid "Return to this moment. Did you notice any fear or anxiety in your thoughts?"
+msgstr "Vuelva a este momento. ¿Había algún miedo o ansiedad en sus pensamientos?"
+
+#: index.html:236
+msgid "Rewind your day. What has brought you happiness?"
+msgstr "Revise su día. ¿Qué le trayó alegría?"
+
+#: index.html:144
+msgid "Search your body for tension."
+msgstr "Busque por tención en su cuerpo."
+
+#: index.html:157
+msgid "Sink in to the full weight of your relaxation, letting gravity pull down."
+msgstr "relájese completamente, y deje que la gravedad tire de su cuerpo."
+
+#: index.html:73
+msgid "Slow down. Search your body for tension."
+msgstr "Con calma. Busque por tención en su cuerpo."
+
+#: index.html:64
+msgid "Start 1-minute Session"
+msgstr "Iniciar Sesión 1 minutos"
+
+#: index.html:65
+msgid "Start 5-minute Session"
+msgstr "Iniciar Sesión 5 minutos"
+
+#: index.html:124
+msgid "Start by focusing on your breath."
+msgstr "Empieze con la concentración de su respiración."
+
+#: index.html:126
+msgid "Take five deep breaths, holding down \"I'm Breathing\" as you breath in, and releasing it as you breath out."
+msgstr "Respire profundamente cinco veces. Oprima el botón mientras inhále, y suéltelo cuando exhále."
+
+#: index.html:85
+msgid "Take four deep breaths, holding down \"I'm Breathing\" as you breath in, and releasing it as you breath out."
+msgstr "Respire profundamente cuatro veces. Oprima el botón mientras inhále, y suéltelo cuando exhále."
+
+#: index.html:188
+msgid "Take {{waiter.getWait()}} seconds to let your mind wander."
+msgstr "Tome {{waiter.getWait()}} segundos para que su mente flote."
+
+#: index.html:257
+msgid "Think about those fears and play them out."
+msgstr "Analice estos temores y desarróllelos."
+
+#: index.html:206
+msgid "Think of how you would objectively describe the emotion to someone."
+msgstr "Piense como describiría sus emociones objetivamente a alguien."
+
+#: index.html:145
+msgid "This could be at your shoulders, back, or even pursed lips."
+msgstr "Este podría ser en sus hombros, su espalda, o su boca."
+
+#: index.html:74
+msgid "This could be at your shoulders, your back, or your mouth."
+msgstr "Este podria ser en sus hombros, su espalda, o su boca."
+
+#: index.html:276
+msgid "This is you, alive and well."
+msgstr "Este es usted, saludable y con vida."
+
+#: index.html:165 index.html:93
+msgid "Turn outward. Open your mind to the sounds around you."
+msgstr "Abra su mente al sonido alrededor de usted."
+
+#: index.html:166 index.html:94
+msgid "What's the texture of the noise. Is it loud or quiet?"
+msgstr "¿Qué tipo de ruido es? ¿Es fuerte o tranquilo?"
+
+#: index.html:113 index.html:277
+msgid "When ready, return to your day in your own time."
+msgstr "Cuando esté listo, vuelva a su dia a su propio tiempo."
+
+#: index.html:258
+msgid "Will they truly prevent you from obtaining your happiness and aspirations?"
+msgstr "¿Podrían estos temores impedir su busqueda de felicidad y aspiraciones?"
+
+#: index.html:199 index.html:251
+msgid "Yes"
+msgstr "sí"
+
+#: index.html:205
+msgid "Your emotions are neither good nor bad, they simply are."
+msgstr "Sus emociones no son buenas o malas. Son emociones no más."
+

@@ -106,7 +106,7 @@ angular.module('busymind')
 .directive('progressIndicators', function ($rootScope, slideManager, waiter, counter, $timeout) {
   return {
     restrict: 'E',
-    templateUrl: '/components/progress/progress.html',
+    templateUrl: 'components/progress/progress.html',
     replace: true,
     link: function (scope) {
       scope.waiter = waiter;

@@ -48,17 +48,23 @@
   </head>
   <body ng-app="busymind" ng-controller="busymindCtrl">
     <ion-content scroll="false" ng-cloak>
-      <button class="rate-cta" ng-click="rateApp()" ng-show="canRate && slideManager.get() === 0"><i class="icon ion-android-favorite-outline"></i></button>
-      <button class="restart-cta" ng-click="slideManager.reset()" ng-hide="slideManager.get() === 0">
+      <button class="rate-cta global-button" ng-click="rateApp()" ng-show="canRate && slideManager.get() === 0"><i class="icon ion-android-favorite-outline"></i></button>
+      <button class="restart-cta global-button" ng-click="slideManager.reset()" ng-hide="slideManager.get() === 0">
         <i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp;<span translate>Restart</span>
+      </button>
+      <button class="settings global-button" ng-click="slideManager.reset()" ng-show="slideManager.get() === 0">
+        <i class="icon ion-ios-gear"></i><span class="element-invisible">Settings</span>
       </button>
       <div class="wrapper">
         <progress-indicators></progress-indicators>
         <div class="slides">
           <slide index="0">
-            <prompt>
-              <h1 class="app-name" translate>Busymind</h1>
-              <p translate>Mindfulness for your busy life</p>
+            <prompt class="app-intro">
+              <!-- <img src="android-chrome-192x192.png" class="logo" alt=""> -->
+              <div class="app-desc">
+                <h1 class="app-name" translate>Busymind</h1>
+                <p translate>Mindfulness for your busy life</p>
+              </div>
             </prompt>
             <buttons>
               <thebutton skin="positive"><span translate>Start 1-minute Session</span></thebutton>
@@ -85,7 +91,7 @@
               <p><strong translate>Take four deep breaths, holding down "I'm Breathing" as you breath in, and releasing it as you breath out.</strong></p>
             </prompt>
             <buttons>
-              <thebutton type="count" limit="4"><span translate>I'm Breathing</span></thebutton>
+              <thebutton type="count" limit="400"><span translate>I'm Breathing</span></thebutton>
             </buttons>
           </slide>
           <slide index="3">

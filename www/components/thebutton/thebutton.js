@@ -2,7 +2,7 @@ angular.module('busymind')
 .directive('thebutton', function($rootScope, slideManager, counter, waiter) {
   return {
     restrict: 'E',
-    templateUrl: '/components/thebutton/thebutton.html',
+    templateUrl: 'components/thebutton/thebutton.html',
     transclude: true,
     scope: {
       skin: '@',
