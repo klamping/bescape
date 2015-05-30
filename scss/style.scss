@@ -198,7 +198,7 @@ button {
     transform-style: preserve-3D;
 
     &.activated {
-      transform: perspective(80px) rotateY(-1deg) rotateZ(-1deg);
+      transform: perspective(80px) rotateZ(-1deg);
       box-shadow: 0 0 2px rgba(0,0,0,0.1);
     }
 
@@ -214,10 +214,9 @@ button {
     }
   }
 
-    .breath {
+  .breath {
     position: relative;
-    z-index: 2;
-
+    z-index: 10;
 
     > span {
       background: #fff;
@@ -227,8 +226,9 @@ button {
     $breathRadius: 200px;
     &.breath + .breath-circle {
       position: absolute;
+      z-index: 1;
       left: 50%;
-      top: 50%;
+      top: 0;
       right: auto;
       bottom: auto;
       transform: translate(-50%, -50%);

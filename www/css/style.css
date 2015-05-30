@@ -239,8 +239,8 @@ button {
     -webkit-transform-style: preserve-3D;
     transform-style: preserve-3D; }
     .buttons button.activated {
-      -webkit-transform: perspective(80px) rotateY(-1deg) rotateZ(-1deg);
-      transform: perspective(80px) rotateY(-1deg) rotateZ(-1deg);
+      -webkit-transform: perspective(80px) rotateZ(-1deg);
+      transform: perspective(80px) rotateZ(-1deg);
       box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); }
     .buttons button > span {
       padding-right: 1.5em;
@@ -250,14 +250,17 @@ button {
       opacity: 1; }
   .buttons .breath {
     position: relative;
-    z-index: 2; }
+    z-index: 10;
+    -webkit-transform: translate3d(0, 0, 0); }
     .buttons .breath > span {
       background: #fff;
       display: inline-block; }
     .buttons .breath.breath + .breath-circle {
       position: absolute;
+      -webkit-transform: translate3d(0, 0, 0);
+      z-index: 1;
       left: 50%;
-      top: 50%;
+      top: 0;
       right: auto;
       bottom: auto;
       -webkit-transform: translate(-50%, -50%);
