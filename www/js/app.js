@@ -59,4 +59,10 @@ angular.module('busymind', ['ionic', 'ngCordova', 'gettext'])
     AppRate.preferences.storeAppURL.ios = '979420569';
     AppRate.promptForRating(true);
   };
+
+  $scope.isWebsite = function () {
+    var url = window.location.href;
+    console.log(url.indexOf('http') > -1);
+    return url.indexOf('http') > -1;
+  }
 });

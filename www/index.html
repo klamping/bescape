@@ -57,10 +57,48 @@
       </button> -->
       <div class="wrapper">
         <progress-indicators></progress-indicators>
+
+        <style type="text/css">
+          .store-links {
+            position: absolute;
+            bottom: .5em;
+            left: .5em;
+            z-index: 20;
+          }
+
+          .store-links a {
+            margin-right: .5em;
+          }
+
+          .store-links img {
+            display: inline-block;
+            height: 45px;
+          }
+
+          @media all and (max-width: 650px) {
+            .store-links {
+              top: .5em;
+              right: .5em;
+              left: auto;
+              bottom: auto;
+            }
+
+            .store-links a {
+              display: block;
+              margin: 0;
+              text-align: right;
+            }
+          }
+        </style>
+
+        <div ng-if="isWebsite() && slideManager.get() === 0" class="store-links">
+          <a href="https://itunes.apple.com/us/app/busymind-mindfulness-meditation/id979420569?ls=1&mt=8"><img src="img/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt="Download on the iOS App Store"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.ionicframework.bescape550966"><img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" /></a>
+        </div>
+
         <div class="slides">
           <slide index="0">
             <prompt class="app-intro">
-              <!-- <img src="android-chrome-192x192.png" class="logo" alt=""> -->
               <div class="app-desc">
                 <h1 class="app-name" translate>Busymind</h1>
                 <p translate>Mindfulness for your busy life</p>
