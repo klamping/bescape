@@ -13,8 +13,9 @@ angular.module('busymind', ['ionic', 'ngCordova', 'gettext'])
 
     if(typeof navigator.globalization !== 'undefined') {
       $cordovaGlobalization.getPreferredLanguage().then(function(language) {
-        gettextCatalog.setCurrentLanguage(language.value);
-        gettextCatalog.loadRemote('/translations/' + language.value + '.json');
+        var main = language.value.split('-')[0];
+        gettextCatalog.setCurrentLanguage(main);
+        gettextCatalog.loadRemote('translations/' + main + '.json');
       });
     }
   });
@@ -58,4 +59,10 @@ angular.module('busymind', ['ionic', 'ngCordova', 'gettext'])
     AppRate.preferences.storeAppURL.ios = '979420569';
     AppRate.promptForRating(true);
   };
+
+  $scope.isWebsite = function () {
+    var url = window.location.href;
+    console.log(url.indexOf('http') > -1);
+    return url.indexOf('http') > -1;
+  }
 });

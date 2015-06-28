@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
     <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
     <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="{{waiter.getWait()}}2x{{waiter.getWait()}}2" href="apple-touch-icon-{{waiter.getWait()}}2x{{waiter.getWait()}}2.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="android-chrome-192x192.png" sizes="192x192">
@@ -48,17 +48,61 @@
   </head>
   <body ng-app="busymind" ng-controller="busymindCtrl">
     <ion-content scroll="false" ng-cloak>
-      <button class="rate-cta" ng-click="rateApp()" ng-show="canRate && slideManager.get() === 0"><i class="icon ion-android-favorite-outline"></i></button>
-      <button class="restart-cta" ng-click="slideManager.reset()" ng-hide="slideManager.get() === 0">
+      <button class="rate-cta global-button" ng-click="rateApp()" ng-show="canRate && slideManager.get() === 0"><i class="icon ion-android-favorite-outline"></i></button>
+      <button class="restart-cta global-button" ng-click="slideManager.reset()" ng-hide="slideManager.get() === 0">
         <i class="icon ion-ios-arrow-left"></i>&nbsp;&nbsp;<span translate>Restart</span>
       </button>
+      <!-- <button class="settings global-button" ng-click="slideManager.reset()" ng-show="slideManager.get() === 0">
+        <i class="icon ion-ios-gear"></i><span class="element-invisible">Settings</span>
+      </button> -->
       <div class="wrapper">
         <progress-indicators></progress-indicators>
+
+        <style type="text/css">
+          .store-links {
+            position: absolute;
+            bottom: .5em;
+            left: .5em;
+            z-index: 20;
+          }
+
+          .store-links a {
+            margin-right: .5em;
+          }
+
+          .store-links img {
+            display: inline-block;
+            height: 45px;
+          }
+
+          @media all and (max-width: 650px) {
+            .store-links {
+              top: .5em;
+              right: .5em;
+              left: auto;
+              bottom: auto;
+            }
+
+            .store-links a {
+              display: block;
+              margin: 0;
+              text-align: right;
+            }
+          }
+        </style>
+
+        <div ng-if="isWebsite() && slideManager.get() === 0" class="store-links">
+          <a href="https://itunes.apple.com/us/app/busymind-mindfulness-meditation/id979420569?ls=1&mt=8"><img src="img/Download_on_the_App_Store_Badge_US-UK_135x40.svg" alt="Download on the iOS App Store"></a>
+          <a href="https://play.google.com/store/apps/details?id=com.ionicframework.bescape550966"><img alt="Get it on Google Play" src="https://developer.android.com/images/brand/en_generic_rgb_wo_45.png" /></a>
+        </div>
+
         <div class="slides">
           <slide index="0">
-            <prompt>
-              <h1 class="app-name" translate>Busymind</h1>
-              <p translate>Mindfulness for your busy life</p>
+            <prompt class="app-intro">
+              <div class="app-desc">
+                <h1 class="app-name" translate>Busymind</h1>
+                <p translate>Mindfulness for your busy life</p>
+              </div>
             </prompt>
             <buttons>
               <thebutton skin="positive"><span translate>Start 1-minute Session</span></thebutton>
@@ -70,6 +114,16 @@
           <!-- 1 Minute Session -->
           <slide index="1">
             <prompt>
+              <p translate>Start by focusing on your breath.</p>
+              <p translate>Take four deep breaths, holding down "I'm Breathing" as you breath in, and releasing it as you breath out.</p>
+              <p translate>As you breath, feel your chest expand and contract. Feel the air move in and out.</p>
+            </prompt>
+            <buttons>
+              <thebutton type="count" limit="4"><span translate>I'm Breathing</span></thebutton>
+            </buttons>
+          </slide>
+          <slide index="2">
+            <prompt>
               <p translate>Slow down. Search your body for tension.</p>
               <p translate>This could be at your shoulders, your back, or your mouth.</p>
               <p translate>Release the tension let your body sink in to relaxation.</p>
@@ -78,21 +132,11 @@
               <thebutton><span translate>I'm Relaxing</span></thebutton>
             </buttons>
           </slide>
-          <slide index="2">
-            <prompt>
-              <p translate>Now focus on your breath.</p>
-              <p translate>As you breath, feel your chest expand and contract. Feel the air move in and out.</p>
-              <p><strong translate>Take four deep breaths, holding down "I'm Breathing" as you breath in, and releasing it as you breath out.</strong></p>
-            </prompt>
-            <buttons>
-              <thebutton type="count" limit="4"><span translate>I'm Breathing</span></thebutton>
-            </buttons>
-          </slide>
           <slide index="3">
             <prompt>
               <p translate>Turn outward. Open your mind to the sounds around you.</p>
               <p translate>What's the texture of the noise. Is it loud or quiet?</p>
-              <p><strong translate>Hold down "I'm Listening" for {{waiter.getWait()}} seconds while you listen to your world.</strong></p>
+              <p translate>Hold down "I'm Listening" for {{waiter.getWait()}} seconds while you listen to your world.</p>
             </prompt>
             <buttons>
               <thebutton type="wait"><span translate>I'm Listening</span></thebutton>
@@ -122,8 +166,8 @@
           <slide index="6">
             <prompt>
               <p translate>Start by focusing on your breath.</p>
+              <p translate>Take five deep breaths, holding down "I'm Breathing" as you breath in, and releasing it as you breath out.</p>
               <p translate>As you breath, feel your chest expand and contract. Feel the air move in and out.</p>
-              <p><strong translate>Take five deep breaths, holding down "I'm Breathing" as you breath in, and releasing it as you breath out.</strong></p>
             </prompt>
             <buttons>
               <thebutton type="count" limit="5"><span translate>I'm Breathing</span></thebutton>
@@ -164,7 +208,7 @@
             <prompt>
               <p translate>Turn outward. Open your mind to the sounds around you.</p>
               <p translate>What's the texture of the noise. Is it loud or quiet?</p>
-              <p><strong translate>Hold down "I'm Listening" for {{waiter.getWait()}} seconds while you listen to your world.</strong></p>
+              <p translate>Hold down "I'm Listening" for {{waiter.getWait()}} seconds while you listen to your world.</p>
             </prompt>
             <buttons>
               <thebutton type="wait"><span translate>I'm Listening</span></thebutton>
